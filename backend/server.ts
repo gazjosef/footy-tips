@@ -1,4 +1,3 @@
-// const express = require("express");
 import express, { Request, Response } from "express";
 const dotenv = require("dotenv").config();
 const port = process.env.PORT || 5001;
