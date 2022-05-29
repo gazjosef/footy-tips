@@ -38,22 +38,24 @@ export default function Login() {
             <input
               type="email"
               className="form-control"
-              id={email}
-              name={email}
+              id="email"
+              name="email"
               value={email}
               placeholder="Enter your email"
               onChange={onChange}
+              autoComplete="on"
             />
           </div>
           <div className="form-group">
             <input
               type="password"
               className="form-control"
-              id={password}
-              name={password}
+              id="password"
+              name="password"
               value={password}
               placeholder="Enter password"
               onChange={onChange}
+              autoComplete="on"
             />
           </div>
 
