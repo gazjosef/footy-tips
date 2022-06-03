@@ -39,6 +39,7 @@ const registerUser = asyncHandler(async (req: Request, res: Response) => {
 
   if (user) {
     res.status(201).json({
+      // Only need to send token
       _id: user.id,
       name: user.name,
       email: user.email,

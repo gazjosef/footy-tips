@@ -1,0 +1,53 @@
+.table {
+  background-color: transparent;
+  width: 100%;
+  // max-width: 100%;
+
+  border-collapse: collapse !important;
+  border-spacing: 0;
+
+  &__logo {
+    img {
+      max-width: 6rem;
+      max-height: 4.5rem;
+    }
+  }
+
+  thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+
+    th {
+      vertical-align: bottom;
+      border-bottom: 2px solid #dee2e6;
+    }
+  }
+
+  td,
+  th {
+    background-color: $color-white !important;
+    padding: 0.75rem;
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
+  }
+
+  tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+  }
+
+  &__striped {
+    tbody {
+      tr:nth-of-type(odd) {
+        background-color: rgba(0, 0, 0, 0.05);
+        background-color: red;
+      }
+    }
+    tr:nth-of-type(odd) {
+      background-color: rgba(0, 0, 0, 0.05);
+      background-color: red;
+    }
+  }
+}

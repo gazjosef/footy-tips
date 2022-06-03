@@ -1,0 +1,22 @@
+.article-comp {
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  grid-template-rows: repeat(2, min-contents);
+  grid-gap: 2rem;
+
+  &__chart {
+    width: 80%;
+  }
+
+  &__button {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+
+    display: grid;
+    place-content: center;
+
+    a {
+      color: $color-white;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.panel {
+  background-color: $color-white;
+  margin-bottom: 2rem;
+  border: 1px solid transparent;
+  border-radius: 0.4rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+
+  &__default {
+    border-color: $color-white-150;
+
+    & > .panel__heading {
+      color: #333;
+      background-color: #f5f5f5;
+      border-color: #ddd;
+    }
+  }
+
+  &__heading {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    font-weight: 500;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: inherit;
+  }
+
+  &__body {
+    padding: 1.5rem;
+  }
+}

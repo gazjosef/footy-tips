@@ -1,0 +1,35 @@
+.btn {
+  padding: 1rem 2rem;
+  border: 1px solid $color-black;
+  border-radius: 0.5rem;
+  background: $color-black;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $color-white;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  appearance: button;
+
+  &:hover {
+    transform: scale(0.98);
+  }
+
+  svg {
+    margin-right: 8px;
+  }
+}
+
+.btn-reverse {
+  background: $color-white;
+  color: $color-black;
+}
+
+.btn-block {
+  width: 100%;
+  margin-bottom: 2rem;
+}
