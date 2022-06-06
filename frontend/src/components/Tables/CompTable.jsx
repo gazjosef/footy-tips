@@ -1,18 +1,28 @@
 import React from "react";
 import { FaCheck } from "react-icons/fa";
 import fixtureData from "../../data/data.json";
+import { iconConverter } from "../Tips/Converter";
 
 function CompTable() {
   let compTable = [];
 
   const createCompTable = () => {
-    const teamNames = ["Dan", "Ron", "Sam", "Tom", "Suzie", "Kain"];
+    // const teamNames = ["Dan", "Ron", "Sam", "Tom", "Suzie", "Kain"];
+    const teamNames2 = [
+      { name: "Dan", team: "Knights" },
+      { name: "Ron", team: "Roosters" },
+      { name: "Sam", team: "Rabbitohs" },
+      { name: "Tom", team: "Sea Eagles" },
+      { name: "Suzie", team: "Eels" },
+      { name: "Kain", team: "Knights" },
+    ];
 
-    teamNames.forEach((name) => {
+    teamNames2.forEach((user) => {
       let teamScore = {
-        name: name,
+        name: user.name,
         played: 0,
         correct: 0,
+        favTeam: user.team,
       };
 
       compTable.push(teamScore);
@@ -76,9 +86,11 @@ function CompTable() {
       <tbody>
         {compTable.map((user, index) => {
           return (
-            <tr>
+            <tr key={index}>
               <th scope="row">{index + 1}</th>
-              <td />
+              <td className="table__logo">
+                <img src={iconConverter[user.favTeam]} alt={user.favTeam} />
+              </td>
               <td>{user.name}</td>
               <td>{user.correct}</td>
             </tr>

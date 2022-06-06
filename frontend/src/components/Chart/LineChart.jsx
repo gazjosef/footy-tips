@@ -10,6 +10,15 @@ export default function LineChart({ chartData }) {
         beginAtZero: true,
       },
     },
+    legend: {
+      display: true,
+      position: "bottom",
+    },
+    title: {
+      display: true,
+      text: "TEST",
+      fontSize: 16,
+    },
   };
 
   return <Line data={chartData} options={options} />;
