@@ -2,9 +2,18 @@ const mongoose = require("mongoose");
 
 const tipSchema = mongoose.Schema(
   {
-    text: {
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      ref: "User",
+    },
+    fixture: {
+      type: Number,
+      required: [true, "Please add a number value"],
+    },
+    tip: {
       type: String,
-      required: [true, "Please add a text value"],
+      required: [true, "Please add a tip value"],
     },
   },
   {

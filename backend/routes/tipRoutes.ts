@@ -9,7 +9,9 @@ const {
   deleteTip,
 } = require("../controllers/tipController");
 
-router.route("/").get(getTips).post(setTip);
-router.route("/:id").put(updateTip).delete(deleteTip);
+const { protect } = require("../middleware/authMiddleware");
+
+router.route("/").get(protect, getTips).post(protect, setTip);
+router.route("/:id").put(protect, updateTip).delete(protect, deleteTip);
 
 module.exports = router;
