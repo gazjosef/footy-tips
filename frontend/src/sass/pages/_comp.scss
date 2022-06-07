@@ -1,18 +1,14 @@
 .article-comp {
-  display: grid;
-  grid-template-columns: repeat(2, min-content);
-  grid-template-rows: repeat(2, min-contents);
-  grid-gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &__chart {
     width: 80%;
   }
 
   &__button {
-    grid-column: 2 / span 1;
-
-    display: grid;
-    place-content: center;
+    margin-top: 2rem;
 
     a {
       color: $color-white;

@@ -13,7 +13,7 @@
 
     & > * {
       min-width: 35rem;
-      min-height: 35rem;
+      min-height: 45rem;
 
       padding: 4rem 0;
 
@@ -21,6 +21,10 @@
       flex-direction: column;
       justify-content: flex-end;
     }
+  }
+
+  .heading {
+    font-size: 4.5rem;
   }
 
   &__icon {
@@ -36,5 +40,9 @@
 
   &__demo {
     background-color: $color-blue;
+
+    & > * {
+      margin-top: 1rem;
+    }
   }
 }

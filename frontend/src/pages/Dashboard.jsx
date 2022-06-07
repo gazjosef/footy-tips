@@ -1,6 +1,10 @@
 import React from "react";
-import { FaFootballBall } from "react-icons/fa";
-import { IconContext } from "react-icons";
+// import {
+//   FaFootballBall,
+//   FaSignInAlt,
+//   FaKey,
+// } from "react-icons/fa";
+// import { IconContext } from "react-icons";
 
 function Dashboard() {
   return (
@@ -8,13 +12,7 @@ function Dashboard() {
       <section className="article-dashboard__box">
         <section className="article-dashboard__login">
           <section className="heading">
-            <h1>
-              <IconContext.Provider
-                value={{ className: "article-dashboard__icon" }}
-              >
-                <FaFootballBall />
-              </IconContext.Provider>
-            </h1>
+            <h1>Login</h1>
           </section>
 
           <section className="form">
@@ -62,17 +60,21 @@ function Dashboard() {
           </section>
         </section>
         <section className="article-dashboard__demo">
-          <div className="form">
+          <section className="form">
+            <div className="form-group">
+              <p>Login as existing user?</p>
+            </div>
+
             <form
             // onSubmit={onSubmit}
             >
               <div className="form-group">
                 <button type="submit" className="btn btn-block">
-                  Submit
+                  Demo
                 </button>
               </div>
             </form>
-          </div>
+          </section>
         </section>
       </section>
     </article>
