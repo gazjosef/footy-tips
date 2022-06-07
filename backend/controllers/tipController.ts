@@ -7,9 +7,9 @@ const User = require("../models/userModel");
 // @desc        Get tips
 // @route       GET /api/tips
 // @acces       Private
-const getTips = asyncHandler(async (req: Request, res: Response) => {
-  // const tips = await Tip.find({user: req.user.id});
-  // res.status(200).json(tips);
+const getTips = asyncHandler(async (req: any, res: Response) => {
+  const tips = await Tip.find();
+  res.status(200).json(tips);
 });
 
 // @desc        Set tip
