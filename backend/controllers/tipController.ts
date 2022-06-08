@@ -21,14 +21,11 @@ const setTip = asyncHandler(async (req: any, res: Response) => {
     throw new Error("Please add a tip field");
   }
 
-  // if (!req.body.fixture) {
-  //   res.status(400);
-  //   throw new Error("Please add a fixture field");
-  // }
+  console.log("req.body", req.body);
 
   const tip = await Tip.create({
-    tip: req.body.text,
-    // text: req.body.text,
+    // tip: req.body.text,
+    text: req.body.text,
     // fixture: req.body.fixture,
     user: req.user.id,
   });
