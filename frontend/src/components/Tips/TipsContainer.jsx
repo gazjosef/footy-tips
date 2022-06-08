@@ -7,7 +7,7 @@ function TipsContainer() {
   const [fixtures, setFixtures] = useState([]);
   const [currentRound, setCurrentRound] = useState("Round 1");
 
-  const [text, setText] = useState("");
+  const [text, setText] = useState([]);
 
   const dispatch = useDispatch();
 
@@ -73,8 +73,10 @@ function TipsContainer() {
   };
 
   const selectTeam = (round, fixtureId, tip) => {
-    console.log("TipId", round, fixtureId, tip);
-    setText(tip);
+    console.log(round, fixtureId, tip);
+
+    setText([...text, [fixtureId, tip]]);
+    // setFixture(fixtureId);
   };
 
   // const onSubmitTip = (e) => {
@@ -88,8 +90,7 @@ function TipsContainer() {
     e.preventDefault();
 
     console.log("text", text);
-    // console.log("createTip", createTip());
-    // console.log("dispatch", dispatch);
+
     dispatch(createTip({ text }));
     setText("");
   };
@@ -132,6 +133,7 @@ function TipsContainer() {
               onChange={(e) => setText(e.target.value)}
             />
           </div>
+
           <div className="form-group">
             <button className="btn btn-block" type="submit">
               Add Goal

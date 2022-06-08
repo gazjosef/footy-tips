@@ -11,9 +11,13 @@ const tipSchema = mongoose.Schema(
     //   type: Number,
     //   required: [true, "Please add a number value"],
     // },
-    tip: {
-      type: String,
-      required: [true, "Please add a tip value"],
+    // tip: {
+    //   type: String,
+    //   required: [true, "Please add a tip value"],
+    // },
+    text: {
+      type: Array,
+      required: [true, "Please add a tip array"],
     },
   },
   {
