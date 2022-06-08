@@ -1,10 +1,19 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import Tip from "./Tip";
+import { createTip } from "../../features/tips/tipSlice";
 
 function TipsContainer() {
   const [fixtures, setFixtures] = useState([]);
   const [currentRound, setCurrentRound] = useState("Round 1");
+
+  const [text, setText] = useState("");
+
+  const dispatch = useDispatch();
+
+  ////////////////////////////////
+  // * Get Tips
+  ////////////////////////////////
 
   useEffect(() => {
     async function getFixtures() {
@@ -63,8 +72,26 @@ function TipsContainer() {
     setCurrentRound(event.target.value);
   };
 
-  const selectTeam = (index, round, fixtureId, team) => {
-    console.log("TipId", round, fixtureId, team);
+  const selectTeam = (round, fixtureId, tip) => {
+    console.log("TipId", round, fixtureId, tip);
+    setText(tip);
+  };
+
+  // const onSubmitTip = (e) => {
+  //   e.preventDefault();
+
+  //   dispatch(createTip({ text }));
+  //   setText("");
+  // };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    console.log("text", text);
+    // console.log("createTip", createTip());
+    // console.log("dispatch", dispatch);
+    dispatch(createTip({ text }));
+    setText("");
   };
 
   return (
@@ -93,15 +120,36 @@ function TipsContainer() {
           return <Tip fixture={fixture} selectTeam={selectTeam} key={index} />;
         })}
 
-      <div className="form__submit">
+      <section className="form">
+        <form onSubmit={onSubmit}>
+          <div className="form-group">
+            <label htmlFor="text">Tip</label>
+            <input
+              type="text"
+              name="text"
+              id="text"
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+            />
+          </div>
+          <div className="form-group">
+            <button className="btn btn-block" type="submit">
+              Add Goal
+            </button>
+          </div>
+        </form>
+      </section>
+
+      {/* Bottom submit */}
+      {/* <div className="form__submit">
         <button
           // onClick={onSubmitTip}
           type="submit"
           className="btn"
         >
-          Submit
+          Add Tips
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }

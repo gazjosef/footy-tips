@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { FaCheck } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { iconConverter } from "./Converter.js";
@@ -8,7 +8,7 @@ export default function Tip({ fixture, selectTeam }) {
 
   useEffect(() => {
     const checkHasResult = (fixture) => {
-      console.log("fixture loading ", fixture);
+      // console.log("fixture loading ", fixture);
       if (
         fixture !== undefined &&
         fixture.result_home !== null &&
@@ -23,10 +23,10 @@ export default function Tip({ fixture, selectTeam }) {
 
   const onChange = (event) => {
     selectTeam(
-      event.target.value,
       fixture.round,
       fixture.fixture_id,
-      fixture.away
+      event.target.value
+      // fixture.away
     );
   };
 
@@ -49,6 +49,7 @@ export default function Tip({ fixture, selectTeam }) {
                 <input
                   type="radio"
                   name={fixture.fixture_id}
+                  value={fixture.home}
                   onChange={onChange}
                 />
               </label>
@@ -93,6 +94,7 @@ export default function Tip({ fixture, selectTeam }) {
                   type="radio"
                   name={fixture.fixture_id}
                   onChange={onChange}
+                  value={fixture.away}
                 />
               </label>
             </div>

@@ -7,10 +7,10 @@ const tipSchema = mongoose.Schema(
       required: true,
       ref: "User",
     },
-    fixture: {
-      type: Number,
-      required: [true, "Please add a number value"],
-    },
+    // fixture: {
+    //   type: Number,
+    //   required: [true, "Please add a number value"],
+    // },
     tip: {
       type: String,
       required: [true, "Please add a tip value"],
