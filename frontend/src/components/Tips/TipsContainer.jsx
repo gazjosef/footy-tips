@@ -91,6 +91,10 @@ function TipsContainer() {
 
     console.log("text", text);
 
+    // text.map((tip) => {
+    //   console.log("tip :>> ", tip);
+    //   dispatch(createTip({ tip }));
+    // });
     dispatch(createTip({ text }));
     setText("");
   };

@@ -28,6 +28,20 @@ export const createTip = createAsyncThunk(
   }
 );
 
+// Get user tips
+export const getTips = createAsyncThunk("tips/getAll", async (_, thunkAPI) => {
+  try {
+    const token = thunkAPI.getState().auth.user.token;
+    return await tipService.getTips(token);
+  } catch (error) {
+    const message =
+      (error.response && error.response.data && error.response.data.message) ||
+      error.message ||
+      error.toString();
+    return thunkAPI.rejectWithValue(message);
+  }
+});
+
 export const tipSlice = createSlice({
   name: "tip",
   initialState,
@@ -45,6 +59,19 @@ export const tipSlice = createSlice({
         state.tips.push(action.payload);
       })
       .addCase(createTip.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+      })
+      .addCase(getTips.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getTips.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.tips = action.payload;
+      })
+      .addCase(getTips.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;

@@ -15,8 +15,22 @@ const createTip = async (tipData, token) => {
   return response.data;
 };
 
+// Get user tips
+const getTips = async (token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+
+  const response = await axios.get(API_URL, config);
+
+  return response.data;
+};
+
 const tipService = {
   createTip,
+  getTips,
 };
 
 export default tipService;
