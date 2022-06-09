@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import Tip from "./Tip";
 import { createTip } from "../../features/tips/tipSlice";
+import fixtureData from "../../data/data.json";
+import nrlData from "../../data/nrl2022.json";
 
 function TipsContainer() {
-  const [fixtures, setFixtures] = useState([]);
+  const [fixtures, setFixtures] = useState(nrlData);
   const [currentRound, setCurrentRound] = useState("Round 1");
 
   const [text, setText] = useState([]);
@@ -15,23 +17,23 @@ function TipsContainer() {
   // * Get Tips
   ////////////////////////////////
 
-  useEffect(() => {
-    async function getFixtures() {
-      const response = await fetch(
-        "https://tipping-app-api.herokuapp.com/fixtures",
-        {
-          method: "get",
-          headers: { "Content-Type": "application/json" },
-        }
-      );
+  // useEffect(() => {
+  //   async function getFixtures() {
+  //     const response = await fetch(
+  //       "https://tipping-app-api.herokuapp.com/fixtures",
+  //       {
+  //         method: "get",
+  //         headers: { "Content-Type": "application/json" },
+  //       }
+  //     );
 
-      response.json().then((fixtures) => {
-        setFixtures(fixtures);
-        // console.table(fixtures);
-      });
-    }
-    getFixtures();
-  }, []);
+  //     response.json().then((fixtures) => {
+  //       setFixtures(fixtures);
+  //       // console.table(fixtures);
+  //     });
+  //   }
+  //   getFixtures();
+  // }, []);
 
   // console.log("fixtures", fixtures);
 

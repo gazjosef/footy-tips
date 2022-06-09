@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaCheck } from "react-icons/fa";
 import { IconContext } from "react-icons";
-import { iconConverter } from "./Converter.js";
+import { dateConverter, iconConverter } from "./Converter.js";
 
 export default function Tip({ fixture, selectTeam }) {
   const [hasResult, setHasResult] = useState(false);
@@ -11,8 +11,8 @@ export default function Tip({ fixture, selectTeam }) {
       // console.log("fixture loading ", fixture);
       if (
         fixture !== undefined &&
-        fixture.result_home !== null &&
-        fixture.result_away !== null
+        fixture.home_result !== null &&
+        fixture.away_result !== null
       ) {
         console.log(fixture);
         setHasResult(true);
@@ -26,7 +26,7 @@ export default function Tip({ fixture, selectTeam }) {
       fixture.round,
       fixture.fixture_id,
       event.target.value
-      // fixture.away
+      // fixture.away_team
     );
   };
 
@@ -40,7 +40,7 @@ export default function Tip({ fixture, selectTeam }) {
                 <FaCheck />
               </IconContext.Provider>
             </div>
-            <div className="tip__result">{fixture.result_home}</div>
+            <div className="tip__result">{fixture.home_result}</div>
           </>
         ) : (
           <>
@@ -49,7 +49,7 @@ export default function Tip({ fixture, selectTeam }) {
                 <input
                   type="radio"
                   name={fixture.fixture_id}
-                  value={fixture.home}
+                  value={fixture.home_team}
                   onChange={onChange}
                 />
               </label>
@@ -57,29 +57,29 @@ export default function Tip({ fixture, selectTeam }) {
           </>
         )}
         <div className="tip__logo">
-          <img src={iconConverter[fixture.home]} alt={fixture.home} />
+          <img src={iconConverter[fixture.home_team]} alt={fixture.home_team} />
         </div>
-        <div className="tip__team">{fixture.home}</div>
+        <div className="tip__team">{fixture.home_team}</div>
       </div>
 
       <div className="tip__details">
         <div className="">
           {fixture.day}
           {"  "}
-          {fixture.date}
+          {dateConverter(fixture.date)}
         </div>
         <div className="">{fixture.time}</div>
         <div className="">{fixture.stadium}</div>
       </div>
 
       <div className="tip__away">
-        <div className="tip__team">{fixture.away}</div>
+        <div className="tip__team">{fixture.away_team}</div>
         <div className="tip__logo">
-          <img src={iconConverter[fixture.away]} alt={fixture.away} />
+          <img src={iconConverter[fixture.away_team]} alt={fixture.away_team} />
         </div>
         {hasResult ? (
           <>
-            <div className="tip__result">{fixture.result_away}</div>
+            <div className="tip__result">{fixture.away_result}</div>
             <div className="tip__check">
               <IconContext.Provider value={{ className: "" }}>
                 <FaCheck />
@@ -94,7 +94,7 @@ export default function Tip({ fixture, selectTeam }) {
                   type="radio"
                   name={fixture.fixture_id}
                   onChange={onChange}
-                  value={fixture.away}
+                  value={fixture.away_team}
                 />
               </label>
             </div>

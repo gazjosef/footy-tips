@@ -16,3 +16,38 @@ export const iconConverter = {
   Titans: require("../../png/t8964_l_h15_aa.png"),
   Warriors: require("../../png/t8968_l_h15_aa.png"),
 };
+
+let test = 2022807;
+
+export const dateConverter = (date) => {
+  const months = [
+    "January",
+    "Febuary",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  console.log("date", date);
+  let splitArr = date.toString().split("");
+  console.log("splitArr", splitArr);
+
+  let day = splitArr.splice(-2).join("");
+
+  console.log("day", day);
+
+  let monthIndex = splitArr.slice(4).splice(-2);
+  let month = months[monthIndex - 1];
+
+  console.log("month", month);
+
+  return `${day} ${month}`;
+};
+
+dateConverter(test);
