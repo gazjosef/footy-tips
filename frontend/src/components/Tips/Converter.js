@@ -34,18 +34,31 @@ export const dateConverter = (date) => {
     "November",
     "December",
   ];
-  console.log("date", date);
+
   let splitArr = date.toString().split("");
-  console.log("splitArr", splitArr);
 
-  let day = splitArr.splice(-2).join("");
+  let day = splitArr.splice(-2);
 
-  console.log("day", day);
+  // if (day[1] === "1") {
+  //   day.push("st");
+  // } else if (day[1] === "2") {
+  //   day.push("nd");
+  // } else if (day[1] === "3") {
+  //   day.push("rd");
+  // } else if (day[0] === "1" && day[1] === "1") {
+  //   day.push("th");
+  // } else if (day[0] === "1" && day[1] === "2") {
+  //   day.push("th");
+  // } else if (day[0] === "1" && day[1] === "3") {
+  //   day.push("th");
+  // } else {
+  //   day.push("th");
+  // }
+
+  day = day.join("");
 
   let monthIndex = splitArr.slice(4).splice(-2);
   let month = months[monthIndex - 1];
-
-  console.log("month", month);
 
   return `${day} ${month}`;
 };
