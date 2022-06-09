@@ -3,12 +3,10 @@ const bcrypt = require("bcryptjs");
 const asyncHandler = require("express-async-handler");
 const User = require("../models/userModel");
 
-import { Request, Response } from "express";
-
 // @desc        Register new user
 // @route       POST /api/users
 // @acces       Public
-const registerUser = asyncHandler(async (req: Request, res: Response) => {
+const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
 
   if (!name || !email || !password) {
@@ -55,7 +53,7 @@ const registerUser = asyncHandler(async (req: Request, res: Response) => {
 // @desc        Authenticate a user
 // @route       POST /api/users/login
 // @acces       Public
-const loginUser = asyncHandler(async (req: Request, res: Response) => {
+const loginUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
   // Check for user email
@@ -77,12 +75,12 @@ const loginUser = asyncHandler(async (req: Request, res: Response) => {
 // @desc        Get user data
 // @route       GET /api/users/me
 // @acces       Private
-const getMe = asyncHandler(async (req: any, res: Response) => {
+const getMe = asyncHandler(async (req, res) => {
   res.status(200).json(req.user);
 });
 
 // Generate JWT
-const generateToken = (id: any) => {
+const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
     expiresIn: "30d",
   });

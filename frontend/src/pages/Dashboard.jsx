@@ -53,9 +53,9 @@ function Dashboard() {
       <section className="content">
         {tips.length > 0 ? (
           <div className="goals">
-            {tips.map((tip) => {
-              console.log("tip", tip);
-            })}
+            {/* {tips.map((tip) => {
+              return console.log("tip", tip);
+            })} */}
           </div>
         ) : (
           <h3>You have not set any tips</h3>

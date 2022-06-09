@@ -1,4 +1,4 @@
-import { Request, Response } from "express";
+// import { Request, Response } from "express";
 const asyncHandler = require("express-async-handler");
 
 const Tip = require("../models/tipModel");
@@ -7,7 +7,7 @@ const User = require("../models/userModel");
 // @desc        Get tips
 // @route       GET /api/tips
 // @acces       Private
-const getTips = asyncHandler(async (req: any, res: Response) => {
+const getTips = asyncHandler(async (req, res) => {
   const tips = await Tip.find({ user: req.user.id });
   res.status(200).json(tips);
 });
@@ -15,7 +15,7 @@ const getTips = asyncHandler(async (req: any, res: Response) => {
 // @desc        Set tip
 // @route       POST /api/tips
 // @acces       Private
-const setTip = asyncHandler(async (req: any, res: Response) => {
+const setTip = asyncHandler(async (req, res) => {
   if (!req.body.text) {
     res.status(400);
     throw new Error("Please add a tip field");
@@ -36,7 +36,7 @@ const setTip = asyncHandler(async (req: any, res: Response) => {
 // @desc        Update tip
 // @route       PUT /api/tips/:id
 // @acces       Private
-const updateTip = asyncHandler(async (req: any, res: Response) => {
+const updateTip = asyncHandler(async (req, res) => {
   const tip = await Tip.findById(req.params.id);
 
   if (!tip) {
@@ -66,7 +66,7 @@ const updateTip = asyncHandler(async (req: any, res: Response) => {
 // @desc        Delete tip
 // @route       DELETE /api/tips/:id
 // @acces       Private
-const deleteTip = asyncHandler(async (req: any, res: Response) => {
+const deleteTip = asyncHandler(async (req, res) => {
   const tip = await Tip.findById(req.params.id);
 
   if (!tip) {
