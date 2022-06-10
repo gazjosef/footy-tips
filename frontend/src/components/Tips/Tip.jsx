@@ -22,12 +22,7 @@ export default function Tip({ fixture, selectTeam }) {
   }, []);
 
   const onChange = (event) => {
-    selectTeam(
-      fixture.round,
-      fixture.fixture_id,
-      event.target.value
-      // fixture.away_team
-    );
+    selectTeam(fixture.round, fixture.fixture_id, event.target.value);
   };
 
   return (

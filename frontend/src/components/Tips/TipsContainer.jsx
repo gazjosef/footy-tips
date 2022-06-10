@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import Tip from "./Tip";
 import { createTip } from "../../features/tips/tipSlice";
-import fixtureData from "../../data/data.json";
 import nrlData from "../../data/nrl2022.json";
 
 function TipsContainer() {
@@ -12,30 +11,6 @@ function TipsContainer() {
   const [text, setText] = useState([]);
 
   const dispatch = useDispatch();
-
-  ////////////////////////////////
-  // * Get Tips
-  ////////////////////////////////
-
-  // useEffect(() => {
-  //   async function getFixtures() {
-  //     const response = await fetch(
-  //       "https://tipping-app-api.herokuapp.com/fixtures",
-  //       {
-  //         method: "get",
-  //         headers: { "Content-Type": "application/json" },
-  //       }
-  //     );
-
-  //     response.json().then((fixtures) => {
-  //       setFixtures(fixtures);
-  //       // console.table(fixtures);
-  //     });
-  //   }
-  //   getFixtures();
-  // }, []);
-
-  // console.log("fixtures", fixtures);
 
   ////////////////////////////////////////
   // * Filter Fixtures
@@ -81,22 +56,11 @@ function TipsContainer() {
     // setFixture(fixtureId);
   };
 
-  // const onSubmitTip = (e) => {
-  //   e.preventDefault();
-
-  //   dispatch(createTip({ text }));
-  //   setText("");
-  // };
-
   const onSubmit = (e) => {
     e.preventDefault();
 
     console.log("text", text);
 
-    // text.map((tip) => {
-    //   console.log("tip :>> ", tip);
-    //   dispatch(createTip({ tip }));
-    // });
     dispatch(createTip({ text }));
     setText("");
   };
@@ -127,37 +91,15 @@ function TipsContainer() {
           return <Tip fixture={fixture} selectTeam={selectTeam} key={index} />;
         })}
 
-      <section className="form">
-        <form onSubmit={onSubmit}>
-          {/* <div className="form-group">
-            <label htmlFor="text">Tip</label>
-            <input
-              type="text"
-              name="text"
-              id="text"
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-            />
-          </div> */}
-
-          <div className="form-group">
-            <button className="btn btn-block btn-form" type="submit">
+      <div className="form-group">
+        <section className="form">
+          <form onSubmit={onSubmit}>
+            <button className="btn btn-block" type="submit">
               Add Tip
             </button>
-          </div>
-        </form>
-      </section>
-
-      {/* Bottom submit */}
-      {/* <div className="form__submit">
-        <button
-          // onClick={onSubmitTip}
-          type="submit"
-          className="btn"
-        >
-          Add Tips
-        </button>
-      </div> */}
+          </form>
+        </section>
+      </div>
     </div>
   );
 }
