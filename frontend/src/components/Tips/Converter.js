@@ -55,12 +55,10 @@ export const dateConverter = (date) => {
   //   day.push("th");
   // }
 
-  day = day.join("");
-
   let monthIndex = splitArr.slice(4).splice(-2);
   let month = months[monthIndex - 1];
 
-  return `${day} ${month}`;
+  return `${day.join("")} ${month}`;
 };
 
 dateConverter(test);
