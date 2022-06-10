@@ -129,7 +129,7 @@ function TipsContainer() {
 
       <section className="form">
         <form onSubmit={onSubmit}>
-          <div className="form-group">
+          {/* <div className="form-group">
             <label htmlFor="text">Tip</label>
             <input
               type="text"
@@ -138,11 +138,11 @@ function TipsContainer() {
               value={text}
               onChange={(e) => setText(e.target.value)}
             />
-          </div>
+          </div> */}
 
           <div className="form-group">
-            <button className="btn btn-block" type="submit">
-              Add Goal
+            <button className="btn btn-block btn-form" type="submit">
+              Add Tip
             </button>
           </div>
         </form>

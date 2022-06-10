@@ -42,9 +42,9 @@ export default function Header() {
               <li>
                 <Link to="/comp">Comp</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/league">League</Link>
-              </li>
+              </li> */}
               <li>
                 <button className="btn" onClick={onLogout}>
                   <FaSignOutAlt /> Logout

@@ -49,18 +49,18 @@ function Dashboard() {
       </section> */}
 
       <TipsContainer />
-
+      {/* 
       <section className="content">
         {tips.length > 0 ? (
           <div className="goals">
-            {/* {tips.map((tip) => {
+            {tips.map((tip) => {
               return console.log("tip", tip);
-            })} */}
+            })}
           </div>
         ) : (
           <h3>You have not set any tips</h3>
         )}
-      </section>
+      </section> */}
     </>
   );
 }
