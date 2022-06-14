@@ -21,8 +21,6 @@ const setTip = asyncHandler(async (req, res) => {
     throw new Error("Please add a tip field");
   }
 
-  console.log("req.body", req.body);
-
   const tip = await Tip.create({
     // tip: req.body.text,
     text: req.body.text,
