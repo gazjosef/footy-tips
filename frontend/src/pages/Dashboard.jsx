@@ -5,13 +5,6 @@ import TipsContainer from "../components/Tips/TipsContainer";
 import Spinner from "../components/Spinner/Spinner";
 import { getTips, reset } from "../features/tips/tipSlice";
 
-// import {
-//   FaFootballBall,
-//   FaSignInAlt,
-//   FaKey,
-// } from "react-icons/fa";
-// import { IconContext } from "react-icons";
-
 function Dashboard() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -30,7 +23,7 @@ function Dashboard() {
       navigate("/login");
     }
 
-    dispatch(getTips());
+    // dispatch(getTips());
 
     return () => {
       dispatch(reset());

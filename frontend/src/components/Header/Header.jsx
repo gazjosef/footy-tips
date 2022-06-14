@@ -37,7 +37,7 @@ export default function Header() {
           {user ? (
             <>
               <li>
-                <Link to="/tips">Tips</Link>
+                <Link to="/">Tips</Link>
               </li>
               <li>
                 <Link to="/comp">Comp</Link>

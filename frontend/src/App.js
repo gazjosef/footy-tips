@@ -9,7 +9,6 @@ import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Comp from "./pages/Comp";
-import Tips from "./pages/Tips";
 import League from "./pages/League";
 import Settings from "./pages/Settings";
 
@@ -27,7 +26,6 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/comp" element={<Comp />} />
-            <Route path="/tips" element={<Tips />} />
             <Route path="/league" element={<League />} />
             <Route path="/settings" element={<Settings />} />
           </Routes>
