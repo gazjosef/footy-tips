@@ -16,7 +16,7 @@ function Comp() {
 
       <section className="article-comp__button">
         <button className="btn btn--comp">
-          <Link to="/tips">Tip Now</Link>
+          <Link to="/">Tip Now</Link>
         </button>
       </section>
     </article>

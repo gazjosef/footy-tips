@@ -21,6 +21,58 @@
       {
         "Round": 5,
         "CorrectTips": 1
+      },
+      {
+        "Round": 6,
+        "CorrectTips": 8
+      },
+      {
+        "Round": 7,
+        "CorrectTips": 3
+      },
+      {
+        "Round": 8,
+        "CorrectTips": 5
+      },
+      {
+        "Round": 9,
+        "CorrectTips": 2
+      },
+      {
+        "Round": 10,
+        "CorrectTips": 5
+      },
+      {
+        "Round": 11,
+        "CorrectTips": 2
+      },
+      {
+        "Round": 12,
+        "CorrectTips": 4
+      },
+      {
+        "Round": 13,
+        "CorrectTips": 5
+      },
+      {
+        "Round": 14,
+        "CorrectTips": 4
+      },
+      {
+        "Round": 15,
+        "CorrectTips": 7
+      },
+      {
+        "Round": 16,
+        "CorrectTips": 6
+      },
+      {
+        "Round": 17,
+        "CorrectTips": 4
+      },
+      {
+        "Round": 18,
+        "CorrectTips": 3
       }
     ]
   ],

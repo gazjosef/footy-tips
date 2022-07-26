@@ -47,7 +47,7 @@ function Dashboard() {
         {tips.length > 0 ? (
           <div className="goals">
             {tips.map((tip) => {
-              console.log("tip", tip);
+              return console.log("tip", tip);
             })}
           </div>
         ) : (
