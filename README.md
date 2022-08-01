@@ -11,7 +11,7 @@ Includes:
 
 ## How to use
 
-Register new user, login existing user or select demo to sign in directly
+Register new user, login existing user to sign in directly
 
 ## Built-With
 
