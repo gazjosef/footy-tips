@@ -13,6 +13,9 @@ Includes:
 
 Register new user, login existing user to sign in directly
 
+Username: 'brad@gmail.com'
+Password: '123456'
+
 ## Built-With
 
 - MongoDB
