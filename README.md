@@ -203,7 +203,10 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 
 Gareth Hind - garethjhind@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/gazjosef/new-tipping-app](https://github.com/gazjosef/new-tipping-app)
+
+
+https://mern-footy-tips.herokuapp.com/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
