@@ -50,8 +50,8 @@ Gareth Hind
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/gazjosef/blackjack-game">
-    <img src="img/blackjack.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/gazjosef/new-tipping-app">
+    <img src="blob/main/frontend/public/android-chrome-512x512.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">BlackJack</h3>
