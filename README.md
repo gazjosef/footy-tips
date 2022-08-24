@@ -151,8 +151,7 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install
    ```
-3. Register new user or sign in directly with login details below:
-
+3. Register new user or sign in directly with login details below.
    ```sh
 Username: 'brad@gmail.com'
 Password: '123456'
