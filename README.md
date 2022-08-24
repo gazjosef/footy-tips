@@ -139,10 +139,23 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install
    ```
-3. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+   
+   
+### Login
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/github_username/repo_name.git
    ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+   
+   Register new user, login existing user to sign in directly
+
+Username: 'brad@gmail.com'
+Password: '123456'
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
