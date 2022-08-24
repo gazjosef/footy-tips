@@ -51,7 +51,7 @@ Gareth Hind
 <br />
 <div align="center">
   <a href="https://github.com/gazjosef/new-tipping-app">
-    <img src="blob/main/frontend/public/android-chrome-512x512.png" alt="Logo" width="80" height="80">
+    <img src="frontend/public/android-chrome-512x512.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">BlackJack</h3>
