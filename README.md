@@ -139,19 +139,7 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
-   
-   
-### Login
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/gazjosef/new-tipping-app.git
    ```
 2. Install NPM packages
    ```sh
@@ -165,9 +153,6 @@ This is an example of how to list things you need to use the software and how to
    Password: '123456'
    ```
 
-
-   
-   
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -206,7 +191,7 @@ Gareth Hind - garethjhind@gmail.com
 Project Link: [https://github.com/gazjosef/new-tipping-app](https://github.com/gazjosef/new-tipping-app)
 
 
-https://mern-footy-tips.herokuapp.com/
+Heroku: [https://mern-footy-tips.herokuapp.com](https://mern-footy-tips.herokuapp.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
