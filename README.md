@@ -54,10 +54,10 @@ Gareth Hind
     <img src="frontend/public/android-chrome-512x512.png" alt="Logo" width="350" height="350">
   </a>
 
-<h3 align="center">BlackJack</h3>
+<h3 align="center">Tipping App</h3>
 
   <p align="center">
-Simple Blackjack game built with HTML, CSS, and JavaScript.
+An office tipping app for friends or work colleagues.
     <br />
   </p>
 </div>
@@ -105,9 +105,11 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-* ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
-
+- ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+- ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+- ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+- ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+- ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
