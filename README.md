@@ -59,7 +59,7 @@ An office tipping app for friends or work colleagues.
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+<!-- ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
@@ -71,7 +71,7 @@ User database to sign in and sign out
 Fixture database to get upcoming fixtures or past results
 Tip database to store user tips and check overall score
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
 
@@ -139,7 +139,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Feature 3
     - [ ] Nested Feature
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+<!-- See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues). -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -148,12 +148,11 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 <!-- CONTACT -->
 ## Contact
 
+Live: [https://mern-footy-tips.herokuapp.com](https://mern-footy-tips.herokuapp.com)
+
+GitHub Link: [https://github.com/gazjosef/new-tipping-app](https://github.com/gazjosef/new-tipping-app)
+
 Gareth Hind - garethjhind@gmail.com
-
-Project Link: [https://github.com/gazjosef/new-tipping-app](https://github.com/gazjosef/new-tipping-app)
-
-
-Heroku: [https://mern-footy-tips.herokuapp.com](https://mern-footy-tips.herokuapp.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
