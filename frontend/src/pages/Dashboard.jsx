@@ -23,6 +23,7 @@ function Dashboard() {
       navigate("/login");
     }
 
+    // ! FIX THIS
     // dispatch(getTips());
 
     return () => {
