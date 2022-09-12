@@ -1,18 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Chart from "../components/Chart/Chart";
-// import CompTable from "../components/Tables/CompTable";
+
+import CompTable from "../components/Tables/CompTable";
 
 function Comp() {
   return (
     <article className="article-comp">
-      <section className="article-comp__chart">
-        <Chart />
-      </section>
-
-      {/* <aside className="panel panel__default">
+      <aside className="panel panel__default">
         <CompTable />
-      </aside> */}
+      </aside>
 
       <section className="article-comp__button">
         <button className="btn btn--comp">

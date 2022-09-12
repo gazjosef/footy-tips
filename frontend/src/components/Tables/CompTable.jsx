@@ -20,9 +20,33 @@ function CompTable() {
     teamNames2.forEach((user) => {
       let teamScore = {
         name: user.name,
-        played: 0,
-        correct: 0,
         favTeam: user.team,
+        R1: null,
+        R2: null,
+        R3: null,
+        R4: null,
+        R5: null,
+        R6: null,
+        R7: null,
+        R8: null,
+        R9: null,
+        R10: null,
+        R11: null,
+        R12: null,
+        R13: null,
+        R14: null,
+        R15: null,
+        R16: null,
+        R17: null,
+        R18: null,
+        R19: null,
+        R20: null,
+        R21: null,
+        R22: null,
+        R23: null,
+        R24: null,
+        R25: null,
+        Correct: 25,
       };
 
       compTable.push(teamScore);
@@ -77,7 +101,32 @@ function CompTable() {
         <tr>
           <th scope="col">Table</th>
           <th scope="col" />
-          <th scope="col"></th>
+          <th scope="col" />
+          <th scope="col">R1</th>
+          <th scope="col">R2</th>
+          <th scope="col">R3</th>
+          <th scope="col">R4</th>
+          <th scope="col">R5</th>
+          <th scope="col">R6</th>
+          <th scope="col">R7</th>
+          <th scope="col">R8</th>
+          <th scope="col">R9</th>
+          <th scope="col">R10</th>
+          <th scope="col">R11</th>
+          <th scope="col">R12</th>
+          <th scope="col">R13</th>
+          <th scope="col">R14</th>
+          <th scope="col">R15</th>
+          <th scope="col">R16</th>
+          <th scope="col">R17</th>
+          <th scope="col">R18</th>
+          <th scope="col">R19</th>
+          <th scope="col">R20</th>
+          <th scope="col">R21</th>
+          <th scope="col">R22</th>
+          <th scope="col">R23</th>
+          <th scope="col">R24</th>
+          <th scope="col">R25</th>
           <th scope="col">
             <FaCheck />
           </th>
@@ -92,7 +141,32 @@ function CompTable() {
                 <img src={iconConverter[user.favTeam]} alt={user.favTeam} />
               </td>
               <td>{user.name}</td>
-              <td>{user.correct}</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
             </tr>
           );
         })}

@@ -265,6 +265,7 @@ body {
 .table thead th {
   vertical-align: bottom;
   border-bottom: 2px solid #dee2e6;
+  min-width: 4.6rem;
 }
 .table td,
 .table th {
