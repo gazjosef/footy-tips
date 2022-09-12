@@ -17,7 +17,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/gazjosef/new-tipping-app">
-    <img src="frontend/public/android-chrome-512x512.png" alt="Logo" width="350" height="350">
+    <img src="frontend/public/android-chrome-512x512.png" alt="Logo" width="250" height="250">
   </a>
 
 <h3 align="center">Tipping App</h3>
@@ -121,6 +121,8 @@ Tip database to store user tips and check overall score
 
 
 <!-- USAGE EXAMPLES -->
+
+<!--
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
@@ -128,7 +130,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+-->
 
 
 <!-- ROADMAP -->
