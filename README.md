@@ -92,7 +92,8 @@ Tip database to store user tips and check overall score
 
 ### Prerequisites
 
-* npm
+* NPM
+  
   ```sh
   npm install npm@latest -g
   ```
