@@ -100,19 +100,23 @@ Tip database to store user tips and check overall score
 ### Installation
 
 1. Clone the repo
+   
    ```sh
    git clone https://github.com/gazjosef/new-tipping-app.git
    ```
 2. Install NPM packages
+   
    ```sh
    npm install
    ```
 3. Download and sign-in to MongoDB Compass 
+   
    ```sh
    https://www.mongodb.com/products/compass
    ```
 4. Request .env file
 5. Sign into heroku from the terminal
+   
    ```sh
    heroku login
    ```
@@ -128,6 +132,7 @@ Tip database to store user tips and check overall score
 ## Usage
 
 1. Register new user or sign in directly with login details below.
+   
    ```sh
    Username: 'brad@gmail.com'
    ```
