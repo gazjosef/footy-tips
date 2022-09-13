@@ -107,13 +107,16 @@ Tip database to store user tips and check overall score
    ```sh
    npm install
    ```
-3. Register new user or sign in directly with login details below.
+3. Download MongoDB Compass and sign-in
    ```sh
-   Username: 'brad@gmail.com'
+   [https://www.mongodb.com/products/compass](https://www.mongodb.com/products/compass)
    ```
+4. Request .env file
+5. Sign into heroku from the terminal
    ```sh
-   Password: '123456'
+   heroku login
    ```
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -124,8 +127,13 @@ Tip database to store user tips and check overall score
 
 ## Usage
 
-1. Enter City && Country Code. 
-2. Click the find button.
+1. Register new user or sign in directly with login details below.
+   ```sh
+   Username: 'brad@gmail.com'
+   ```
+   ```sh
+   Password: '123456'
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -133,9 +141,9 @@ Tip database to store user tips and check overall score
 <!-- ROADMAP -->
 ## Roadmap
 
-- [✅] User login authorization
-- [✅] Display current sport season
-- [✅] Select tip
+- [x] User login authorization
+- [x] Display current sport season
+- [x] Select tip
 - [ ] Display all users overall tip score
 
 <!-- See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues). -->
