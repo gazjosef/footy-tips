@@ -107,9 +107,9 @@ Tip database to store user tips and check overall score
    ```sh
    npm install
    ```
-3. Download MongoDB Compass and sign-in
+3. Download and sign-in to MongoDB Compass 
    ```sh
-   [https://www.mongodb.com/products/compass](https://www.mongodb.com/products/compass)
+   https://www.mongodb.com/products/compass
    ```
 4. Request .env file
 5. Sign into heroku from the terminal
