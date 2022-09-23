@@ -1,4 +1,6 @@
 /*
+
+
 0 - 600px:    Phone
 600 - 900px:  Tablet Portrait
 900 - 1200px:  Tablet Landscape
@@ -9,6 +11,29 @@ $breakpoint arguement choices:
 - phone
 - tab-port
 - tab-land
+- big-desktop
+
+ORDER: Base + Typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+/*
+
+Option 2
+
+0 - 520px:    Phone 32.5em
+520 - 768px:  Tablet Portrait 48em
+768 - 1024px:  Tablet Landscape 64em
+(1024 - 1280px) is where our normal styles apply 80em
+(1280 - 1536px) Desktop 96em
+1536px+:       Big Desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- laptop
+- desktop
 - big-desktop
 
 ORDER: Base + Typography > general layout + grid > page layout > components
@@ -175,7 +200,7 @@ body {
   background-image: none;
   border: 1px solid hsl(0deg, 0%, 80%);
   border-radius: 0.4rem;
-  width: 15em;
+  width: 30rem;
   height: 3.4rem;
   padding: 0.6rem 1.2rem;
   margin-left: 2rem;
@@ -211,9 +236,10 @@ body {
   font-family: inherit;
 }
 .form-group label {
-  text-align: left;
-  display: block;
   margin: 0 0 5px 3px;
+  width: 15rem;
+  display: block;
+  text-align: left;
 }
 
 .panel {
@@ -453,7 +479,7 @@ body {
   color: hsl(0deg, 0%, 100%);
 }
 .header ul li a:hover {
-  color: #777;
+  color: hsl(0deg, 0%, 80%);
 }
 .header ul li a svg {
   margin-right: 5px;

@@ -5,12 +5,9 @@ import { createTip } from "../../features/tips/tipSlice";
 import nrlData from "../../data/nrl2022.json";
 
 function TipsContainer() {
-  // eslint-disable-next-line
-  const [fixtures, setFixtures] = useState(nrlData);
+  const fixtures = nrlData;
   const [currentRound, setCurrentRound] = useState("Round 1");
-
   const [text, setText] = useState([]);
-
   const dispatch = useDispatch();
 
   ////////////////////////////////////////

@@ -13,9 +13,10 @@ export default function Register() {
     email: "",
     password: "",
     password2: "",
+    favTeam: "Broncos",
   });
 
-  const { name, email, password, password2 } = formData;
+  const { name, email, password, password2, favTeam } = formData;
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -53,15 +54,37 @@ export default function Register() {
         name,
         email,
         password,
+        favTeam,
       };
 
-      dispatch(register(userData));
+      console.log(userData);
+
+      // dispatch(register(userData));
     }
   };
 
   if (isLoading) {
     return <Spinner />;
   }
+
+  const teamNames = [
+    "Broncos",
+    "Bulldogs",
+    "Cowboys",
+    "Dragons",
+    "Eels",
+    "Knights",
+    "Panthers",
+    "Rabbitohs",
+    "Raiders",
+    "Roosters",
+    "Sea Eagles",
+    "Sharks",
+    "Storm",
+    "Tigers",
+    "Titans",
+    "Warriors",
+  ];
 
   return (
     <>
@@ -75,6 +98,8 @@ export default function Register() {
       <section className="form">
         <form onSubmit={onSubmit}>
           <div className="form-group">
+            <label htmlFor="name">Name: </label>
+
             <input
               type="text"
               className="form-control"
@@ -86,6 +111,8 @@ export default function Register() {
             />
           </div>
           <div className="form-group">
+            <label htmlFor="email">Email: </label>
+
             <input
               type="email"
               className="form-control"
@@ -97,6 +124,8 @@ export default function Register() {
             />
           </div>
           <div className="form-group">
+            <label htmlFor="password">Password: </label>
+
             <input
               type="password"
               className="form-control"
@@ -109,6 +138,8 @@ export default function Register() {
             />
           </div>
           <div className="form-group">
+            <label htmlFor="password2">Confirm Password: </label>
+
             <input
               type="password"
               className="form-control"
@@ -119,6 +150,26 @@ export default function Register() {
               onChange={onChange}
               autoComplete="on"
             />
+          </div>
+
+          <div className="form__group">
+            <label htmlFor="favTeam">Favorite Team: </label>
+
+            <select
+              className="form__control"
+              id="favTeam"
+              name="favTeam"
+              onChange={onChange}
+            >
+              {teamNames.map((team, index) => (
+                <option
+                  key={index}
+                  // className={selectedTeam === team ? "selected" : ""}
+                >
+                  {team}
+                </option>
+              ))}
+            </select>
           </div>
 
           <div className="form-group">

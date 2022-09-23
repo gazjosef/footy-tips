@@ -15,7 +15,7 @@
     background-image: none;
     border: 1px solid $color-white-200;
     border-radius: 0.4rem;
-    width: 15em;
+    width: 30rem;
     height: 3.4rem;
     padding: 0.6rem 1.2rem;
     margin-left: 2rem;
@@ -61,8 +61,11 @@
   }
 
   label {
-    text-align: left;
-    display: block;
     margin: 0 0 5px 3px;
+    width: 15rem;
+
+    display: block;
+
+    text-align: left;
   }
 }

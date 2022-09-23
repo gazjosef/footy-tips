@@ -1,6 +1,8 @@
 // MEDIA QUERY MANAGER
 
 /*
+
+
 0 - 600px:    Phone
 600 - 900px:  Tablet Portrait
 900 - 1200px:  Tablet Landscape
@@ -11,6 +13,30 @@ $breakpoint arguement choices:
 - phone
 - tab-port
 - tab-land
+- big-desktop
+
+ORDER: Base + Typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+
+/*
+
+Option 2
+
+0 - 520px:    Phone 32.5em
+520 - 768px:  Tablet Portrait 48em
+768 - 1024px:  Tablet Landscape 64em
+(1024 - 1280px) is where our normal styles apply 80em
+(1280 - 1536px) Desktop 96em
+1536px+:       Big Desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- laptop
+- desktop
 - big-desktop
 
 ORDER: Base + Typography > general layout + grid > page layout > components
