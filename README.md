@@ -92,7 +92,8 @@ Tip database to store user tips and check overall score
 
 ### Prerequisites
 
-* npm
+* NPM
+  
   ```sh
   npm install npm@latest -g
   ```
@@ -100,20 +101,27 @@ Tip database to store user tips and check overall score
 ### Installation
 
 1. Clone the repo
+   
    ```sh
    git clone https://github.com/gazjosef/new-tipping-app.git
    ```
 2. Install NPM packages
+   
    ```sh
    npm install
    ```
-3. Register new user or sign in directly with login details below.
+3. Download and sign-in to MongoDB Compass 
+   
    ```sh
-   Username: 'brad@gmail.com'
+   https://www.mongodb.com/products/compass
    ```
+4. Request .env file
+5. Sign into heroku from the terminal
+   
    ```sh
-   Password: '123456'
+   heroku login
    ```
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -122,24 +130,27 @@ Tip database to store user tips and check overall score
 
 <!-- USAGE EXAMPLES -->
 
-<!--
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+1. Register new user or sign in directly with login details below.
+   
+   ```sh
+   Username: 'brad@gmail.com'
+   ```
+   ```sh
+   Password: '123456'
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
--->
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [x] User login authorization
+- [x] Display current sport season
+- [x] Select tip
+- [ ] Display all users overall tip score
 
 <!-- See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues). -->
 
