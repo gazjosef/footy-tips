@@ -59,7 +59,7 @@ An office tipping app for friends or work colleagues.
 
 
 <!-- ABOUT THE PROJECT -->
-<!-- ## About The Project
+## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
@@ -71,7 +71,7 @@ User database to sign in and sign out
 Fixture database to get upcoming fixtures or past results
 Tip database to store user tips and check overall score
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
