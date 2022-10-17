@@ -61,15 +61,15 @@ An office tipping app for friends or work colleagues.
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-An office tipping app for friends or work colleagues.
+<!-- An office tipping app for friends or work colleagues.
 
 Includes:
 
 User database to sign in and sign out
 Fixture database to get upcoming fixtures or past results
-Tip database to store user tips and check overall score
+Tip database to store user tips and check overall score -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
