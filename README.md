@@ -63,15 +63,15 @@ An office tipping app for friends or work colleagues.
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-<!-- An office tipping app for friends or work colleagues.
+An app used to display a sport schedule and then allows user to select the winning team. 
 
-Includes:
+The selection is then saved to a database.
 
-User database to sign in and sign out
-Fixture database to get upcoming fixtures or past results
-Tip database to store user tips and check overall score -->
+An additional page displays the user's overall score in a table compared with other user's score.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+The layout design is styled with SASS and the app is written in JavaScript and Redux.
+
+The backend uses Node.js, Express.js, Mongo.db.
 
 
 
