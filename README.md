@@ -23,7 +23,7 @@
 <h3 align="center">Tipping App</h3>
 
   <p align="center">
-An office tipping app for friends or work colleagues.
+An office tipping app for users to login and store tip selection.
     <br />
   </p>
 </div>
