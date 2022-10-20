@@ -63,13 +63,17 @@ An office tipping app for users to login and store tip selection.
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-An app used to display a sport schedule and then allows user to select the winning team. 
+User logins with name and password.
 
-The selection is then saved to a database.
+The App displays latest fixtures in a sports schedule.
+
+User selects team and the selection is stored in a database.
+
+The user's selection is compared against results and calculated.
 
 An additional page displays the user's overall score in a table compared with other user's score.
 
-The layout design is styled with SASS and the app is written in JavaScript and Redux.
+The layout design is styled with SASS and the app is written in JavaScript, React, Next.js and Redux.
 
 The backend uses Node.js, Express.js, Mongo.db.
 
