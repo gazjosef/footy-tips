@@ -23,7 +23,7 @@
 <h3 align="center">Tipping App</h3>
 
   <p align="center">
-A sport tipping app for friends or work colleagues.
+A tipping app allowing users to select tips for upcoming fixtures and store them in a database. The database then compares all tips to determine a leaderboard, showcasing the top tipsters
     <br />
   </p>
 </div>
