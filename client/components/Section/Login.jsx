@@ -62,7 +62,7 @@ const Login = () => {
       </div>
 
       <div>
-        <div className="form__group">
+        <div className="form__group | u-my-1">
           <p>
             Don&rsquo;t have an account?{" "}
             <a href="" className="u-clr-primary-300">

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Login from "../components/Section/Login";
-import Register from "../components/Section/Register";
+// import Register from "../components/Section/Register";
 import Link from "next/link";
 
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
               </div>
               <div className="hero__item hero__item--end | u-flex u-flex-col  u-justify-center">
                 <div className="form__group">
-                  <p>Enter with guest account?</p>
+                  <p>Enter with guest account</p>
                 </div>
                 <div className="form__group">
                   <Link href="/tips">
