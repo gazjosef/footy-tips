@@ -17,7 +17,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/gazjosef/new-tipping-app">
-    <img src="frontend/public/android-chrome-512x512.png" alt="Logo" width="250" height="250">
+    <img src="client/public/favicon_io/android-chrome-512x512.png" alt="Logo" width="250" height="250">
   </a>
 
 <h3 align="center">Tipping App</h3>
