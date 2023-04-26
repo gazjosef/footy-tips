@@ -1,6 +1,8 @@
 import Tip from "../models/Tip.js";
 
 // CREATE TIP
+// ROUTE: POST /api/tips
+// ACCESS: Private
 export const createTip = async (req, res, next) => {
   const newTip = new Tip(req.body);
 
@@ -13,6 +15,8 @@ export const createTip = async (req, res, next) => {
 };
 
 // UPDATE TIP
+// ROUTE: POST /api/tips/id
+// ACCESS: Private
 export const updateTip = async (req, res, next) => {
   try {
     const updatedTip = await Tip.findByIdAndUpdate(
@@ -31,6 +35,8 @@ export const updateTip = async (req, res, next) => {
 };
 
 // DELETE TIP
+// ROUTE: DELETE /api/tips/:id
+// ACCESS: Private
 export const deleteTip = async (req, res, next) => {
   try {
     await Tip.findByIdAndDelete(req.params.id);
@@ -41,6 +47,8 @@ export const deleteTip = async (req, res, next) => {
 };
 
 // GET TIP
+// ROUTE: GET /api/tips
+// ACCESS: Private
 export const getTip = async (req, res, next) => {
   try {
     const tip = await Tip.find(req.params.id);
