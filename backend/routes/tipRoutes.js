@@ -11,18 +11,18 @@ import { verifyAdmin } from "../utils/verifyToken.js";
 const router = express.Router();
 
 // CREATE
-router.post("/", verifyAdmin, createTip);
-
-// UPDATE
-router.put("/:id", verifyAdmin, updateTip);
-
-// DELETE
-router.delete("/:id", verifyAdmin, deleteTip);
-
-// GET
-router.get("/:id", getTip);
+router.post("/", createTip);
 
 // GET ALL
 router.get("/", getAllTips);
+
+// UPDATE
+router.put("/:id", updateTip);
+
+// DELETE
+router.delete("/:id", deleteTip);
+
+// GET
+router.get("/:id", getTip);
 
 export default router;
