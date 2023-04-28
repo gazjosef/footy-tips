@@ -2,7 +2,7 @@
   "name": "tipping-app",
   "version": "1.0.0",
   "description": "tipping app",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js"

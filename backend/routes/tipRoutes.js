@@ -1,28 +1,31 @@
-import express from "express";
-import {
-  createTip,
-  deleteTip,
-  getAllTips,
-  getTip,
-  updateTip,
-} from "../controllers/tip.js";
-import { verifyAdmin } from "../utils/verifyToken.js";
-
+const express = require("express");
 const router = express.Router();
+// import {
+//   createTip,
+//   deleteTip,
+//   getAllTips,
+//   getTip,
+//   updateTip,
+// } from "../controllers/tip.js";
+// import { verifyAdmin } from "../utils/verifyToken.js";
 
-// CREATE
-router.post("/", createTip);
+router.get("/", (req, res) => {
+  res.status(200).json({ message: "Get Tips" });
+});
 
-// GET ALL
-router.get("/", getAllTips);
+// // CREATE
+// router.post("/", createTip);
 
-// UPDATE
-router.put("/:id", updateTip);
+// // GET ALL
+// router.get("/", getAllTips);
 
-// DELETE
-router.delete("/:id", deleteTip);
+// // UPDATE
+// router.put("/:id", updateTip);
 
-// GET
-router.get("/:id", getTip);
+// // DELETE
+// router.delete("/:id", deleteTip);
 
-export default router;
+// // GET
+// router.get("/:id", getTip);
+
+module.exports = router;

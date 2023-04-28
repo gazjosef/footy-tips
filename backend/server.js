@@ -1,8 +1,9 @@
+// import tipRoutes from "./routes/tipRoutes";
+// const tipRoutes = require("./routes/tipRoutes");
 const express = require("express");
 // import express from "express";
 const dotenv = require("dotenv").config();
 // import dotenv from "dotenv";
-// import tipRoutes from "./routes/tipRoutes";
 
 // const path = require("path");
 // const colors = require("colors");
@@ -22,6 +23,7 @@ const app = express();
 // app.use(express.json());
 // app.use(express.urlencoded({ extended: false }));
 
+app.use("/api/tips", require("./routes/tipRoutes"));
 // app.use("/api/tips", require("./routes/tipRoutes"));
 // app.use("/api/users", require("./routes/userRoutes"));
 
