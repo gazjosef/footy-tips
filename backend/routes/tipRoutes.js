@@ -1,43 +1,23 @@
 const express = require("express");
 const router = express.Router();
-// import {
-//   createTip,
-//   deleteTip,
-//   getAllTips,
-//   getTip,
-//   updateTip,
-// } from "../controllers/tip.js";
+const {
+  createTip,
+  deleteTip,
+  getAllTips,
+  getTip,
+  updateTip,
+} = require("../controllers/tip.js");
+
 // import { verifyAdmin } from "../utils/verifyToken.js";
 
-router.get("/", (req, res) => {
-  res.status(200).json({ message: "Get Tips" });
-});
+router.route("/").get(getAllTips).post(createTip);
+router.route("/:id").get(getTip).put(updateTip).delete(deleteTip);
 
-router.post("/", (req, res) => {
-  res.status(200).json({ message: "Create Tips" });
-});
-
-router.put("/:id", (req, res) => {
-  res.status(200).json({ message: `Update Tip ${req.params.id}` });
-});
-
-router.delete("/:id", (req, res) => {
-  res.status(200).json({ message: `Delete Tips ${req.params.id}` });
-});
-
-// // CREATE
+// router.get("/", getAllTips);
 // router.post("/", createTip);
 
-// // GET ALL
-// router.get("/", getAllTips);
-
-// // UPDATE
-// router.put("/:id", updateTip);
-
-// // DELETE
-// router.delete("/:id", deleteTip);
-
-// // GET
 // router.get("/:id", getTip);
+// router.put("/:id", updateTip);
+// router.delete("/:id", deleteTip);
 
 module.exports = router;

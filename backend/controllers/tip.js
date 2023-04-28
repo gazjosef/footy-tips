@@ -1,9 +1,9 @@
-import Tip from "../models/Tip.js";
+// import Tip from "../models/Tip.js";
 
 // CREATE TIP
 // ROUTE: POST /api/tips
 // ACCESS: Private
-export const createTip = (req, res) => {
+const createTip = (req, res) => {
   res.status(200).json({ message: "Create Tip" });
   // const newTip = new Tip(req.body);
 
@@ -18,8 +18,8 @@ export const createTip = (req, res) => {
 // UPDATE TIP
 // ROUTE: POST /api/tips/:id
 // ACCESS: Private
-export const updateTip = async (req, res, next) => {
-  res.status(200).json({ message: "Update Tip" });
+const updateTip = async (req, res, next) => {
+  res.status(200).json({ message: `Update Tips ${req.params.id}` });
   // try {
   //   const updatedTip = await Tip.findByIdAndUpdate(
   //     req.params.id,
@@ -39,8 +39,8 @@ export const updateTip = async (req, res, next) => {
 // DELETE TIP
 // ROUTE: DELETE /api/tips/:id
 // ACCESS: Private
-export const deleteTip = async (req, res, next) => {
-  res.status(200).json({ message: "Delete Tip" });
+const deleteTip = async (req, res, next) => {
+  res.status(200).json({ message: `Delete Tips ${req.params.id}` });
   // try {
   //   await Tip.findByIdAndDelete(req.params.id);
   //   res.status(200).json("Tip has been deleted");
@@ -52,8 +52,8 @@ export const deleteTip = async (req, res, next) => {
 // GET TIP
 // ROUTE: GET /api/tips/:id
 // ACCESS: Private
-export const getTip = async (req, res, next) => {
-  res.status(200).json({ message: "Get Tip" });
+const getTip = async (req, res, next) => {
+  res.status(200).json({ message: `Get Tip ${req.params.id}` });
   // try {
   //   const tip = await Tip.find(req.params.id);
   //   res.status(200).json(tip);
@@ -65,7 +65,7 @@ export const getTip = async (req, res, next) => {
 // GET ALL TIPS
 // ROUTE: GET /api/tips
 // ACCESS: Private
-export const getAllTips = async (req, res, next) => {
+const getAllTips = async (req, res, next) => {
   res.status(200).json({ message: "Get All Tips" });
   // try {
   //   const tips = await Tip.find();
@@ -73,4 +73,12 @@ export const getAllTips = async (req, res, next) => {
   // } catch (error) {
   //   next(error);
   // }
+};
+
+module.exports = {
+  createTip,
+  updateTip,
+  deleteTip,
+  getTip,
+  getAllTips,
 };
