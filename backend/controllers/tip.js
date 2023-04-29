@@ -1,9 +1,16 @@
+const asyncHandler = require("express-async-handler");
 // import Tip from "../models/Tip.js";
 
 // CREATE TIP
 // ROUTE: POST /api/tips
 // ACCESS: Private
-const createTip = (req, res) => {
+const createTip = asyncHandler(async (req, res) => {
+  if (!req.body.text) {
+    res.status(400);
+
+    throw new Error("Please add a text field");
+  }
+
   res.status(200).json({ message: "Create Tip" });
   // const newTip = new Tip(req.body);
 
@@ -13,12 +20,12 @@ const createTip = (req, res) => {
   // } catch (error) {
   //   next(error);
   // }
-};
+});
 
 // UPDATE TIP
 // ROUTE: POST /api/tips/:id
 // ACCESS: Private
-const updateTip = async (req, res, next) => {
+const updateTip = asyncHandler(async (req, res, next) => {
   res.status(200).json({ message: `Update Tips ${req.params.id}` });
   // try {
   //   const updatedTip = await Tip.findByIdAndUpdate(
@@ -34,12 +41,12 @@ const updateTip = async (req, res, next) => {
   // } catch (error) {
   //   res.status(500).json(error);
   // }
-};
+});
 
 // DELETE TIP
 // ROUTE: DELETE /api/tips/:id
 // ACCESS: Private
-const deleteTip = async (req, res, next) => {
+const deleteTip = asyncHandler(async (req, res, next) => {
   res.status(200).json({ message: `Delete Tips ${req.params.id}` });
   // try {
   //   await Tip.findByIdAndDelete(req.params.id);
@@ -47,12 +54,12 @@ const deleteTip = async (req, res, next) => {
   // } catch (error) {
   //   res.status(500).json(error);
   // }
-};
+});
 
 // GET TIP
 // ROUTE: GET /api/tips/:id
 // ACCESS: Private
-const getTip = async (req, res, next) => {
+const getTip = asyncHandler(async (req, res, next) => {
   res.status(200).json({ message: `Get Tip ${req.params.id}` });
   // try {
   //   const tip = await Tip.find(req.params.id);
@@ -60,12 +67,12 @@ const getTip = async (req, res, next) => {
   // } catch (error) {
   //   res.status(500).json(error);
   // }
-};
+});
 
 // GET ALL TIPS
 // ROUTE: GET /api/tips
 // ACCESS: Private
-const getAllTips = async (req, res, next) => {
+const getAllTips = asyncHandler(async (req, res, next) => {
   res.status(200).json({ message: "Get All Tips" });
   // try {
   //   const tips = await Tip.find();
@@ -73,7 +80,7 @@ const getAllTips = async (req, res, next) => {
   // } catch (error) {
   //   next(error);
   // }
-};
+});
 
 module.exports = {
   createTip,
