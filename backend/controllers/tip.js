@@ -1,5 +1,5 @@
 const asyncHandler = require("express-async-handler");
-// import Tip from "../models/Tip.js";
+const Tip = require("../models/tipModel");
 
 // CREATE TIP
 // ROUTE: POST /api/tips
@@ -11,49 +11,45 @@ const createTip = asyncHandler(async (req, res) => {
     throw new Error("Please add a text field");
   }
 
-  res.status(200).json({ message: "Create Tip" });
-  // const newTip = new Tip(req.body);
+  const tip = await Tip.create({
+    text: req.body.text,
+  });
 
-  // try {
-  //   const savedTip = await newTip.save();
-  //   res.status(200).json(savedTip);
-  // } catch (error) {
-  //   next(error);
-  // }
+  res.status(200).json(tip);
 });
 
 // UPDATE TIP
 // ROUTE: POST /api/tips/:id
 // ACCESS: Private
 const updateTip = asyncHandler(async (req, res, next) => {
-  res.status(200).json({ message: `Update Tips ${req.params.id}` });
-  // try {
-  //   const updatedTip = await Tip.findByIdAndUpdate(
-  //     req.params.id,
-  //     {
-  //       $set: req.body,
-  //     },
-  //     {
-  //       new: true,
-  //     }
-  //   );
-  //   res.status(200).json(updatedTip);
-  // } catch (error) {
-  //   res.status(500).json(error);
-  // }
+  const tip = await Tip.findById(req.params.id);
+
+  if (!tip) {
+    res.status(400);
+    throw new Error("Tip not found");
+  }
+
+  const updatedTip = await Tip.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+  });
+
+  res.status(200).json(updatedTip);
 });
 
 // DELETE TIP
 // ROUTE: DELETE /api/tips/:id
 // ACCESS: Private
 const deleteTip = asyncHandler(async (req, res, next) => {
-  res.status(200).json({ message: `Delete Tips ${req.params.id}` });
-  // try {
-  //   await Tip.findByIdAndDelete(req.params.id);
-  //   res.status(200).json("Tip has been deleted");
-  // } catch (error) {
-  //   res.status(500).json(error);
-  // }
+  const tip = await Tip.findById(req.params.id);
+
+  if (!tip) {
+    res.status(400);
+    throw new Error("Tip not found");
+  }
+
+  await tip.deleteOne();
+
+  res.status(200).json({ id: req.params.id });
 });
 
 // GET TIP
@@ -73,7 +69,8 @@ const getTip = asyncHandler(async (req, res, next) => {
 // ROUTE: GET /api/tips
 // ACCESS: Private
 const getAllTips = asyncHandler(async (req, res, next) => {
-  res.status(200).json({ message: "Get All Tips" });
+  const tips = await Tip.find();
+  res.status(200).json(tips);
   // try {
   //   const tips = await Tip.find();
   //   res.status(200).json(tips);
