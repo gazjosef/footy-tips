@@ -13,11 +13,4 @@ const {
 router.route("/").get(getAllTips).post(createTip);
 router.route("/:id").get(getTip).put(updateTip).delete(deleteTip);
 
-// router.get("/", getAllTips);
-// router.post("/", createTip);
-
-// router.get("/:id", getTip);
-// router.put("/:id", updateTip);
-// router.delete("/:id", deleteTip);
-
 module.exports = router;

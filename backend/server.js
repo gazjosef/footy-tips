@@ -1,20 +1,14 @@
 const express = require("express");
+const colors = require("colors");
 const dotenv = require("dotenv").config();
 const { errorHandler } = require("./middleware/errorMiddleware");
-
-// const path = require("path");
-// const colors = require("colors");
-
-// const connectDB = require("./config/db");
+const connectDB = require("./config/db");
 const port = process.env.PORT || 5001;
 
 // connectDB();
+// const path = require("path");
 
 const app = express();
-
-// app.get("/api/tips", (req, res) => {
-//   res.status(200).send({ message: "Get Tips" });
-// });
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
