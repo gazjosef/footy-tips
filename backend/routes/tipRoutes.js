@@ -7,10 +7,13 @@ const {
   getTip,
   updateTip,
 } = require("../controllers/tip.js");
+const { protect } = require("../middleware/authMiddleware");
 
-// import { verifyAdmin } from "../utils/verifyToken.js";
-
-router.route("/").get(getAllTips).post(createTip);
-router.route("/:id").get(getTip).put(updateTip).delete(deleteTip);
+router.route("/").get(protect, getAllTips).post(protect, createTip);
+router
+  .route("/:id")
+  .get(protect, getTip)
+  .put(protect, updateTip)
+  .delete(protect, deleteTip);
 
 module.exports = router;
