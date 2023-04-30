@@ -1,0 +1,38 @@
+$default-font-size: 1.6rem;
+
+$ff-primary: "Poppins", sans-serif;
+$ff-secondary: "Raleway", sans-serif;
+$ff-body: $ff-primary;
+$ff-heading: $ff-primary;
+
+$fs-primary-heading: clamp(2.5rem, 3vw, 3.5rem);
+$fs-secondary-heading: clamp(2.25rem, 2.5vw, 2.75rem);
+$fs-body: clamp(1.75rem, 1.8vw, 2rem);
+$fs-button: var(--fs-300);
+
+body {
+  color: var(--clr-black-900);
+  font-family: $ff-primary;
+  font-size: $default-font-size;
+  font-weight: var(--fw-regular);
+  line-height: 1.7;
+}
+
+.primary-heading {
+  font-size: $fs-primary-heading;
+  font-weight: var(--fw-semi-bold);
+}
+
+.secondary-heading {
+  color: var(--clr-primary-400);
+  font-size: $fs-secondary-heading;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.3rem;
+  // text-transform: uppercase;
+}
+
+.paragraph {
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
