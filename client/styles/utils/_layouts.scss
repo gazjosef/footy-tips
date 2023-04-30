@@ -1,0 +1,46 @@
+.u-block {
+  display: block;
+}
+
+.u-hidden {
+  display: none;
+}
+
+.u-md-hidden {
+  @media (max-width: 768px) {
+    background-color: red;
+    display: hidden;
+  }
+}
+
+.u-invisible {
+  visibility: hidden;
+}
+
+.u-sm-invisible {
+  @media (max-width: 640px) {
+    background-color: red;
+    visibility: hidden;
+  }
+}
+
+.u-md-invisible {
+  @media (max-width: 768px) {
+    background-color: red;
+    visibility: hidden;
+  }
+}
+
+.u-visible {
+  visibility: visible;
+}
+
+// * POSITION
+
+.u-relative {
+  position: relative;
+}
+
+.u-absolute {
+  position: absolute;
+}

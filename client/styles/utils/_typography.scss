@@ -1,0 +1,43 @@
+// * FONT
+
+// HEADING
+
+.u-fs-primary-heading {
+  font-size: $fs-primary-heading;
+}
+
+.u-fs-secondary-heading {
+  font-size: $fs-secondary-heading;
+}
+
+// UI
+
+.u-fs-button {
+  font-size: $fs-button;
+}
+
+.u-leading-snug {
+  line-height: 1.375;
+}
+
+// TEXT TRANSFORM
+
+.u-uppercase {
+  text-transform: uppercase;
+}
+
+// CENTER TEXT
+
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-center-text-md {
+  @media (max-width: 768px) {
+    text-align: center !important;
+  }
+}
+
+.u-text-right {
+  text-align: right !important;
+}
