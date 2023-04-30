@@ -14,9 +14,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/tips", require("./routes/tipRoutes"));
+app.use("/api/users", require("./routes/userRoutes"));
 app.use(errorHandler);
-
-// app.use("/api/users", require("./routes/userRoutes"));
 
 // Serve frontend
 // if (process.env.NODE_ENV === "production") {
