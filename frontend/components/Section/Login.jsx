@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaSignInAlt } from "react-icons/fa";
+import { AuthContext } from "@/context/AuthContext";
 
-const Register = () => {
+const Login = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
 
   const { email, password } = formData;
+
+  const { loading, error, dispatch } = useContext(AuthContext);
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -65,4 +68,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Login;
