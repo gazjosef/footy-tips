@@ -1,13 +1,22 @@
 import { createContext, useEffect, useReducer } from "react";
 
+// GET USER FROM LOCAL STORAGE
+const user = JSON.parse(localStorage.getItem("user"));
+
 const INITIAL_STATE = {
-  user:
-    (typeof window !== "undefined" &&
-      JSON.parse(localStorage.getItem("user"))) ||
-    null,
+  user: user ? user : null,
   loading: false,
   error: null,
 };
+
+// const INITIAL_STATE = {
+//   user:
+//     (typeof window !== "undefined" &&
+//       JSON.parse(localStorage.getItem("user"))) ||
+//     null,
+//   loading: false,
+//   error: null,
+// };
 
 export const AuthContext = createContext(INITIAL_STATE);
 
