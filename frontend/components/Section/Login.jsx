@@ -19,9 +19,18 @@ const Login = () => {
     }));
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
+    dispatch({ type: "LOGIN_START" });
+    try {
+      const res = await axious.post("/auth/login", formData);
+      dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
+    } catch (error) {
+      dispatch({ type: "LOGIN_FAILURE", payload: error.response.data });
+    }
   };
+
+  // console.log("user", user);
 
   return (
     <form className="form" onSubmit={onSubmit}>
@@ -36,7 +45,7 @@ const Login = () => {
           type="email"
           id="email"
           className="form__control"
-          value={email}
+          // value={email}
           placeholder="Enter your email"
           onChange={onChange}
           autoComplete="on"
@@ -48,7 +57,7 @@ const Login = () => {
           type="text"
           id="password"
           className="form__control"
-          value={password}
+          // value={password}
           placeholder="Enter password"
           onChange={onChange}
           autoComplete="on"
