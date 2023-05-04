@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Login from "../components/Section/Login";
-import Register from "../components/Section/Register";
 import Link from "next/link";
 
 export default function Home() {

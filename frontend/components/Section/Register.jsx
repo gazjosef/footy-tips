@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 import { FaUser } from "react-icons/fa";
 
@@ -79,11 +80,16 @@ const Register = () => {
       </div>
 
       <div className="form__group">
-        <p>Already a member? Login here</p>
+        <p>
+          Already a member? Login <Link href="/">here</Link>.
+        </p>
       </div>
 
       <div className="form__group">
-        <button type="submit" className="btn btn-block">
+        <button
+          type="submit"
+          className="btn btn-block | u-bg-primary-400 u-clr-white-0"
+        >
           Submit
         </button>
       </div>

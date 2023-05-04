@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useContext, useState } from "react";
 import { FaSignInAlt } from "react-icons/fa";
 import { AuthContext } from "@/context/AuthContext";
@@ -65,11 +66,16 @@ const Login = () => {
       </div>
 
       <div className="form__group">
-        <p>Already a member? Login here</p>
+        <p>
+          Not a member? Register <Link href="/register">here</Link>.
+        </p>
       </div>
 
       <div className="form__group">
-        <button type="submit" className="btn btn-block">
+        <button
+          type="submit"
+          className="btn btn-block | u-bg-primary-400 u-clr-white-0"
+        >
           Submit
         </button>
       </div>
