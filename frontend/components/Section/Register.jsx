@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaUser } from "react-icons/fa";
+import AuthContext from "../../context/AuthContext";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +13,8 @@ const Register = () => {
 
   const { name, email, password, password2 } = formData;
 
+  const { dispatch } = useContext(AuthContext);
+
   const onChange = (e) => {
     setFormData((prevState) => ({
       ...prevState,
@@ -21,6 +24,16 @@ const Register = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+
+    if (password !== password2) {
+      console.log("Passwords do not match");
+    } else {
+      const userData = {
+        name,
+        email,
+        password,
+      };
+    }
   };
 
   return (

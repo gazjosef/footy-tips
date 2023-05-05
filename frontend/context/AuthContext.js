@@ -8,19 +8,10 @@ const user =
     : null;
 
 const INITIAL_STATE = {
-  user: user ? user : null,
+  user: user || null,
   loading: false,
   error: null,
 };
-
-// const INITIAL_STATE = {
-//   user:
-//     (typeof window !== "undefined" &&
-//       JSON.parse(localStorage.getItem("user"))) ||
-//     null,
-//   loading: false,
-//   error: null,
-// };
 
 export const AuthContext = createContext(INITIAL_STATE);
 
@@ -55,21 +46,21 @@ const AuthReducer = (state, action) => {
   }
 };
 
-export const getServerSideProps = async () => {
-  return {
-    props: {
-      INITIAL_STATE,
-    },
-  };
-};
+// export const getServerSideProps = async () => {
+//   return {
+//     props: {
+//       INITIAL_STATE,
+//     },
+//   };
+// };
 
 export const AuthContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AuthReducer, INITIAL_STATE);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem("user", JSON.stringify(state.user));
-    }
+    // if (typeof window !== "undefined") {
+    localStorage.setItem("user", JSON.stringify(state.user));
+    // }
   }, [state.user]);
 
   return (

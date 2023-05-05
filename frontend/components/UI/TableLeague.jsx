@@ -76,6 +76,8 @@ const TableLeague = () => {
         }
 
         if (fixture.result_away === fixture.result_home) {
+          homeTeam.draws += 1;
+          homeTeam.points += 2;
           awayTeam.draws += 1;
           awayTeam.points += 2;
         }
@@ -99,10 +101,10 @@ const TableLeague = () => {
             <th scope="col">Team</th>
             <th scope="col">P</th>
             <th scope="col">W</th>
-            <th scope="col">D</th>
             <th scope="col">L</th>
-            <th scope="col">+/-</th>
+            <th scope="col">D</th>
             <th scope="col">Pts</th>
+            <th scope="col">+/-</th>
           </tr>
         </thead>
         <tbody>
@@ -121,10 +123,10 @@ const TableLeague = () => {
                 <td>{team.name}</td>
                 <td>{team.played}</td>
                 <td>{team.wins}</td>
-                <td>{team.draws}</td>
                 <td>{team.losses}</td>
-                <td>{team.diff}</td>
+                <td>{team.draws}</td>
                 <td>{team.points}</td>
+                <td>{team.diff}</td>
               </tr>
             );
           })}

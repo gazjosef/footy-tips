@@ -1,4 +1,5 @@
 import Link from "next/link";
+import axios from "axios";
 import { useContext, useState } from "react";
 import { FaSignInAlt } from "react-icons/fa";
 import { AuthContext } from "@/context/AuthContext";
@@ -11,12 +12,12 @@ const Login = () => {
 
   const { email, password } = formData;
 
-  const { loading, error, dispatch } = useContext(AuthContext);
+  const { user, loading, error, dispatch } = useContext(AuthContext);
 
   const onChange = (e) => {
     setFormData((prevState) => ({
       ...prevState,
-      [e.target.name]: e.target.value,
+      [e.target.id]: e.target.value,
     }));
   };
 
@@ -24,14 +25,14 @@ const Login = () => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axious.post("/auth/login", formData);
+      const res = await axios.post("/auth/tips", formData);
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
     } catch (error) {
       dispatch({ type: "LOGIN_FAILURE", payload: error.response.data });
     }
   };
 
-  // console.log("user", user);
+  console.log("user", user);
 
   return (
     <form className="form" onSubmit={onSubmit}>
@@ -46,7 +47,7 @@ const Login = () => {
           type="email"
           id="email"
           className="form__control"
-          // value={email}
+          value={email}
           placeholder="Enter your email"
           onChange={onChange}
           autoComplete="on"
@@ -58,7 +59,7 @@ const Login = () => {
           type="text"
           id="password"
           className="form__control"
-          // value={password}
+          value={password}
           placeholder="Enter password"
           onChange={onChange}
           autoComplete="on"
@@ -76,9 +77,10 @@ const Login = () => {
           type="submit"
           className="btn btn-block | u-bg-primary-400 u-clr-white-0"
         >
-          Submit
+          Login
         </button>
       </div>
+      {error && <span>{error.message}</span>}
     </form>
   );
 };

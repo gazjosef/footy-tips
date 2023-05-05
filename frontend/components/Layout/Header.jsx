@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <header className="header | u-bg-primary-400 u-clr-white-0">
       <div className="container | u-flex u-items-center u-justify-between">
-        <Link href="/dashboard">
+        <Link href="/">
           <div className="header__logo | u-flex u-items-center u-justify-between | u-clr-white-0">
             <IconContext.Provider value={{ className: "" }}>
               <FaFootballBall />
