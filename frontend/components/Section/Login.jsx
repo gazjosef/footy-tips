@@ -23,16 +23,19 @@ const Login = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post("/auth/tips", formData);
+      const res = await axios.post("/api/users/login", formData);
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
     } catch (error) {
       dispatch({ type: "LOGIN_FAILURE", payload: error.response.data });
     }
   };
 
+  console.log("formData", formData);
   console.log("user", user);
+  console.log("loading", loading);
 
   return (
     <form className="form" onSubmit={onSubmit}>

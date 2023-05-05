@@ -2,10 +2,10 @@ import Link from "next/link";
 import { FaFootballBall, FaSignOutAlt } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { AuthContext } from "@/context/AuthContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 const Header = () => {
-  const { user } = useContext(AuthContext);
+  const { user } = useState(false);
 
   return (
     <header className="header | u-bg-primary-400 u-clr-white-0">
@@ -18,7 +18,7 @@ const Header = () => {
             <h3 className="u-ml-1 u-uppercase">Footy Tips</h3>
           </div>
         </Link>
-        {!user && (
+        {user && (
           <ul role="list" className="u-flex u-items-center">
             <li>
               <Link href="/tips" className="u-mx-1 | u-clr-white-0">
