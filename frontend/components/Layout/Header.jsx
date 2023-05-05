@@ -12,7 +12,7 @@ const Header = () => {
       <div className="container | u-flex u-items-center u-justify-between">
         <Link href="/">
           <div className="header__logo | u-flex u-items-center u-justify-between | u-clr-white-0">
-            <IconContext.Provider value={{ className: "" }}>
+            <IconContext.Provider value={{ className: "u-fs-750" }}>
               <FaFootballBall />
             </IconContext.Provider>
             <h3 className="u-ml-1 u-uppercase">Footy Tips</h3>
