@@ -1,14 +1,21 @@
 import { createContext, useEffect, useReducer } from "react";
 
+let user = null;
+
 // *** GET USER FROM LOCAL STORAGE
-// const user = JSON.parse(localStorage.getItem("user"));
-const user =
-  typeof localStorage !== "undefined"
-    ? JSON.parse(localStorage.getItem("user"))
-    : null;
+if (typeof localStorage !== "undefined") {
+  // Your code that uses localStorage here
+  user = JSON.parse(localStorage.getItem("user"));
+  console.log("Defined");
+} else {
+  // Handle the absence of localStorage
+  // Display an error message, use alternative storage, or take other appropriate actions
+  console.log("Undefined");
+  user = null;
+}
 
 const INITIAL_STATE = {
-  user: user || null,
+  user: user,
   loading: false,
   error: null,
 };
@@ -46,23 +53,14 @@ const AuthReducer = (state, action) => {
   }
 };
 
-// export const getServerSideProps = async () => {
-//   return {
-//     props: {
-//       INITIAL_STATE,
-//     },
-//   };
-// };
-
 export const AuthContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AuthReducer, INITIAL_STATE);
 
   useEffect(() => {
-    // if (typeof window !== "undefined") {
     localStorage.setItem("user", JSON.stringify(state.user));
-    // }
   }, [state.user]);
 
+  console.log("state.user", state.user);
   return (
     <AuthContext.Provider
       value={{

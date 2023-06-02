@@ -3,8 +3,6 @@ import Tip from "../UI/Tip";
 import nrlData from "../../public/data/nrl2022.json";
 
 const Fixtures = () => {
-  // GET ALL FIXTURES
-
   const fixtures = nrlData;
 
   const [currentRound, setCurrentRound] = useState("Round 1");

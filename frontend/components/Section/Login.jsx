@@ -1,8 +1,7 @@
 import Link from "next/link";
 import axios from "axios";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { FaSignInAlt } from "react-icons/fa";
-import { AuthContext } from "@/context/AuthContext";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -11,8 +10,6 @@ const Login = () => {
   });
 
   const { email, password } = formData;
-
-  const { user, loading, error, dispatch } = useContext(AuthContext);
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -32,10 +29,6 @@ const Login = () => {
       dispatch({ type: "LOGIN_FAILURE", payload: error.response.data });
     }
   };
-
-  console.log("formData", formData);
-  console.log("user", user);
-  console.log("loading", loading);
 
   return (
     <form className="form" onSubmit={onSubmit}>

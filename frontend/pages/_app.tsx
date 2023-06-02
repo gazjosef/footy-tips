@@ -5,6 +5,7 @@ import type { AppProps } from "next/app";
 import { AuthContextProvider } from "../context/AuthContext";
 
 export default function App({ Component, pageProps }: AppProps) {
+  console.log("AuthContextProvider", AuthContextProvider);
   return (
     <AuthContextProvider>
       <Layout>
