@@ -1,7 +1,8 @@
 import Link from "next/link";
 import axios from "axios";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaSignInAlt } from "react-icons/fa";
+import { AuthContext } from "@/context/AuthContext";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +11,8 @@ const Login = () => {
   });
 
   const { email, password } = formData;
+
+  const { loading, error, dispatch } = useContext(AuthContext);
 
   const onChange = (e) => {
     setFormData((prevState) => ({
