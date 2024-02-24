@@ -17,7 +17,7 @@
     <img src="frontend/public/favicon_io/android-chrome-512x512.png" alt="Logo" width="250" height="250">
   </a>
 
-<h3 align="center">Tipping App</h3>
+<h3 align="center">Footy Tips</h3>
 
   <p align="center">
 A tipping app allowing users to select tips for upcoming fixtures and store them in a database. The database then compares all tips to determine a leaderboard, showcasing the top tipsters
