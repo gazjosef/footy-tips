@@ -1,17 +1,19 @@
-// ** Import Shared Components
-import Layout from "../components/Layout/Layout.tsx";
-import Login from "../components/Sections/Login.tsx";
-import Register from "../components/Sections/Register.tsx";
-import Calendar from "../components/Snippets/Calendar";
+// ** Import Share Component
+import Layout from "../components/Layout/Layout";
+import Login from "../components/Sections/Login";
+import Register from "../components/Sections/Register";
+import Fixtures from "../components/Sections/Fixtures";
 import "./App.css";
 
 function App() {
   return (
-    <Layout>
-      {/* <Calendar /> */}
-      <Login />
-      <Register />
-    </Layout>
+    <>
+      <Layout>
+        <Fixtures />
+        <Login />
+        <Register />
+      </Layout>
+    </>
   );
 }
 

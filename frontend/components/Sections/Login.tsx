@@ -1,14 +1,11 @@
-import { IconContext } from "react-icons";
 import { FaUser } from "react-icons/fa";
 
 const Login: React.FC = () => {
   return (
     <section className="min-h-[85vh] | grid place-items-center">
       <form className="max-w-md w-1/3 mx-auto border-2 p-4 rounded-lg space-y-6">
-        <div className="space-x-2 mx-auto | flex items-center justify-center | text-2xl uppercase">
-          <IconContext.Provider value={{ size: "2rem" }}>
-            <FaUser />
-          </IconContext.Provider>
+        <div className="space-x-2 mx-auto | flex items-center justify-center | text-2xl">
+          <FaUser />
           <h2>Login</h2>
         </div>
         <div>
@@ -22,7 +19,7 @@ const Login: React.FC = () => {
             type="email"
             id="email"
             name="email"
-            placeholder="jane@gmail.com"
+            placeholder="john@gmail.com"
             className="block w-full px-4 py-2 mt-1 text-gray-700 bg-gray-200 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:bg-white focus:ring-0"
           />
         </div>
@@ -37,7 +34,7 @@ const Login: React.FC = () => {
             type="password"
             id="password"
             name="password"
-            placeholder="booking123"
+            placeholder="password123"
             className="block w-full px-4 py-2 mt-1 text-gray-700 bg-gray-200 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:bg-white focus:ring-0"
           />
         </div>
