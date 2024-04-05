@@ -185,7 +185,7 @@ Project Link: [https://github.com/gazjosef](https://github.com/gazjosef)
 [license-url]: https://github.com/gazjosef/footy-tips/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/gareth-h-a32448191
-[product-screenshot]: docs/TippingApp.png
+[product-screenshot]: https://raw.githubusercontent.com/gazjosef/footy-tips/main/frontend/public/docs/TippingApp.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
