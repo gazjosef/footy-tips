@@ -30,7 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/gazjosef/footy-tips">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="frontend/public/favicon_io/android-chrome-512x512.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Footy Tips</h3>
