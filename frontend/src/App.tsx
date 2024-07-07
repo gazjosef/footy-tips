@@ -2,14 +2,14 @@
 import Layout from "../components/Layout/Layout";
 import Login from "../components/Sections/Login";
 import Register from "../components/Sections/Register";
-import Fixtures from "../components/Sections/Fixtures";
+import Tips from "../components/Sections/Tips";
 import "./App.css";
 
 function App() {
   return (
     <>
       <Layout>
-        <Fixtures />
+        <Tips />
         <Login />
         <Register />
       </Layout>

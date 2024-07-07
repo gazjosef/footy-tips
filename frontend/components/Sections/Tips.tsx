@@ -1,13 +1,23 @@
 import { useState } from "react";
 import Tip from "../Snippets/Tip";
 import nrlData from "../../public/data/nrl2022.json";
+import TipsRoundDropDown from "../Snippets/TipsRoundDropDown";
+import Button from "../Snippets/Button";
 
-interface Fixture {
+export interface Fixture {
+  fixture_id: number;
   round: string;
-  // Define other properties of Fixture as per your JSON structure
+  day: string;
+  date: number;
+  time: string;
+  home_team: string;
+  home_result: string;
+  away_team: string;
+  away_result: string;
+  stadium: string;
 }
 
-const Fixtures: React.FC = () => {
+export default function Tips() {
   const fixtures: Fixture[] = nrlData;
   const [currentRound, setCurrentRound] = useState<string>("Round 1");
   //   const [text, setText] = useState<Array<[string, string]>>([]);
@@ -35,49 +45,33 @@ const Fixtures: React.FC = () => {
   //   const selectTeam = (round: string, fixtureId: string, tip: string) => {
   //     setText([...text, [fixtureId, tip]]);
   //   };
-
   return (
     <section className="min-h-[85vh] p-5 | grid place-items-center">
       <form className="mx-auto space-y-2">
         <div className="mx-auto | flex items-center space-x-1">
           <h3>Select Round:</h3>
-          <select
-            className="border rounded-lg px-2 py-1"
-            id="selectedRound"
+          <TipsRoundDropDown
+            rounds={rounds}
+            currentRound={currentRound}
             onChange={selectedRound}
-          >
-            {rounds.map((round, index) => (
-              <option
-                key={index}
-                className={currentRound === round ? "selected" : ""}
-              >
-                {round}
-              </option>
-            ))}
-          </select>
+          />
         </div>
 
         {roundFixtures &&
           roundFixtures.map((fixture, index) => {
             return (
-              <Tip
-                fixture={fixture}
-                key={index}
-                // selectTeam={selectTeam}
-              />
+              <div>
+                <h1>Hello World</h1>
+                <Tip
+                  fixture={fixture}
+                  key={index}
+                  // selectedRound={selectedRound}
+                />
+              </div>
             );
           })}
-        <div>
-          <button
-            type="submit"
-            className="w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-500 focus:outline-none focus:bg-indigo-500"
-          >
-            Submit
-          </button>
-        </div>
+        <Button title={"Submit"} />
       </form>
     </section>
   );
-};
-
-export default Fixtures;
+}

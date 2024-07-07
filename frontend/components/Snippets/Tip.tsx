@@ -1,17 +1,12 @@
-import React from "react";
-// import { Fixture } from "@/types"; // Import Fixture type if available
+import { Fixture } from "../Sections/Tips";
 
-type TODO = any;
 interface TipProps {
-  fixture: TODO; // Define Fixture type if available
-  selectTeam: (round: string, fixtureId: string, value: string) => void;
+  fixture: Fixture; // Define Fixture type if available
+  // selectTeam: (round: string, fixtureId: string, value: string) => void;
 }
 
-const Tip: React.FC<TipProps> = ({ fixture, selectTeam }) => {
-  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    selectTeam(fixture.round, fixture.fixture_id, event.target.value);
-  };
-
+export default function Tip({ fixture }: TipProps) {
+  console.log("fixture", fixture);
   return (
     <div className="h-20 w-[50vw] bg-white mb-8 mx-auto border-2 rounded-lg | flex items-center justify-between">
       <div className="flex">
@@ -19,18 +14,18 @@ const Tip: React.FC<TipProps> = ({ fixture, selectTeam }) => {
           <input
             type="radio"
             className="mx-2"
-            name={fixture.fixture_id}
+            name={fixture.home_team}
             value={fixture.home_team}
-            onChange={onChange}
+            // onChange={onChange}
           />
         </div>
 
         {/* <Image
-          src={iconConverter[fixture.home_team]}
-          alt={fixture.home_team}
-          height={45}
-          width={60} // Corrected typo in width
-        /> */}
+            src={iconConverter[fixture.home_team]}
+            alt={fixture.home_team}
+            height={45}
+            width={60} // Corrected typo in width
+          /> */}
 
         <div className="w-32 | font-medium	">{fixture.home_team}</div>
       </div>
@@ -45,24 +40,22 @@ const Tip: React.FC<TipProps> = ({ fixture, selectTeam }) => {
         <div className="w-32 font-medium">{fixture.away_team}</div>
 
         {/* <Image
-          src={iconConverter[fixture.away_team]}
-          alt={fixture.away_team}
-          height={45}
-          width={60} // Corrected typo in width
-        /> */}
+            src={iconConverter[fixture.away_team]}
+            alt={fixture.away_team}
+            height={45}
+            width={60} // Corrected typo in width
+          /> */}
 
         <div className="w-14">
           <input
             type="radio"
             className="mx-2"
-            name={fixture.fixture_id}
+            name={fixture.away_team}
             value={fixture.away_team}
-            onChange={onChange}
+            // onChange={onChange}
           />
         </div>
       </div>
     </div>
   );
-};
-
-export default Tip;
+}

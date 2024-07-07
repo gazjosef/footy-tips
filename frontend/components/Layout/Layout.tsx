@@ -6,7 +6,7 @@ interface LayoutProps {
   children: ReactNode;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+export default function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-full">
       <Header />
@@ -14,6 +14,4 @@ const Layout = ({ children }: LayoutProps) => {
       <Footer />
     </div>
   );
-};
-
-export default Layout;
+}

@@ -1,9 +1,6 @@
-import React from "react";
-// ** Import Icons
-// import { IconContext } from "react-icons";
 import { FaSignOutAlt } from "react-icons/fa";
 
-const Navbar: React.FC = () => {
+export default function Navbar() {
   return (
     <nav>
       <ul role="list" className="flex items-center space-x-4">
@@ -19,5 +16,4 @@ const Navbar: React.FC = () => {
       </ul>
     </nav>
   );
-};
-export default Navbar;
+}

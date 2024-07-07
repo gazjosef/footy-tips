@@ -1,8 +1,6 @@
-import React from "react";
+const currentYear: number = new Date().getFullYear();
 
-const Footer: React.FC = () => {
-  const currentYear: number = new Date().getFullYear();
-
+export default function Footer() {
   return (
     <footer className="bg-black py-4 |  text-white">
       <section className="container mx-auto">
@@ -13,6 +11,4 @@ const Footer: React.FC = () => {
       </section>
     </footer>
   );
-};
-
-export default Footer;
+}
