@@ -20,7 +20,7 @@ export interface Fixture {
 export default function Tips() {
   const fixtures: Fixture[] = nrlData;
   const [currentRound, setCurrentRound] = useState<string>("Round 1");
-  //   const [text, setText] = useState<Array<[string, string]>>([]);
+
   const filterFixtures = () => {
     return fixtures.filter((fixture) => {
       return fixture.round === currentRound;
@@ -47,7 +47,7 @@ export default function Tips() {
   //   };
   return (
     <section className="min-h-[85vh] p-5 | grid place-items-center">
-      <form className="mx-auto space-y-2">
+      <form className="w-1/2 mx-auto space-y-2">
         <div className="mx-auto | flex items-center space-x-1">
           <h3>Select Round:</h3>
           <TipsRoundDropDown
@@ -60,16 +60,14 @@ export default function Tips() {
         {roundFixtures &&
           roundFixtures.map((fixture, index) => {
             return (
-              <div>
-                <h1>Hello World</h1>
-                <Tip
-                  fixture={fixture}
-                  key={index}
-                  // selectedRound={selectedRound}
-                />
-              </div>
+              <Tip
+                fixture={fixture}
+                key={index}
+                // selectedRound={selectedRound}
+              />
             );
           })}
+
         <Button title={"Submit"} />
       </form>
     </section>

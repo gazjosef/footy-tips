@@ -1,4 +1,3 @@
-// ** Import Share Component
 import Layout from "../components/Layout/Layout";
 import Login from "../components/Sections/Login";
 import Register from "../components/Sections/Register";
@@ -7,13 +6,11 @@ import "./App.css";
 
 function App() {
   return (
-    <>
-      <Layout>
-        <Tips />
-        <Login />
-        <Register />
-      </Layout>
-    </>
+    <Layout>
+      <Tips />
+      <Login />
+      <Register />
+    </Layout>
   );
 }
 

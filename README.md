@@ -136,10 +136,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-  - [ ] Nested Feature
+- [x] Authentication
+- [x] Display Tips
+- [x] Store Tips
+- [x] Competition Stats Page
+- [x] Settings Page
+- [ ] Migrate From Heroku
+
 
 See the [open issues](https://github.com/gazjosef/footy-tips/issues) for a full list of proposed features (and known issues).
 

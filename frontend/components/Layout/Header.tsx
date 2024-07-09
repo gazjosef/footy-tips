@@ -1,5 +1,5 @@
-import Navbar from "../Layout/Navbar";
 import Logo from "../Snippets/Logo";
+import Navbar from "../Layout/Navbar";
 
 export default function Header() {
   return (
